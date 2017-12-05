@@ -92,19 +92,16 @@ Supervisor: & {\itshape \@supervisor}\\
 \begin{center}
 \vspace*{1.5cm}
 
-\includegraphics[scale=0.6]{agh}
+\begin{tabular}{m{20mm} m}
+  
+  \includegraphics[scale=0.3]{agh}
+  & \makecell{{\sffamily{\large{\bfseries \MakeUppercase{Akademia G\'{o}rniczo-Hutnicza}}\\\vspace{3mm}{\bfseries im. Stanis\l{}awa Staszica w Krakowie}}\\\vspace{3mm}\bfseries \MakeUppercase{\@faculty}}}\\
+  \hline
 
-\vspace*{2mm}
+\end{tabular}
 
-{\sffamily{\large{\bfseries{\scshape Akademia G\'{o}rniczo-Hutnicza im. Stanis\l{}awa Staszica w Krakowie}}}
 
-\vspace*{1mm}
-
-{\small\bfseries \MakeUppercase{\@faculty}}}
 \vspace*{3mm}
-
-{\small{\MakeUppercase{\@department}}}
-\vspace*{12mm}
 
 {\sffamily\Large \@thesistype}
 \vspace*{9mm}
