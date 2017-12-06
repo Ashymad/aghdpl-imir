@@ -18,7 +18,7 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}} 
 \ProcessOptions\LoadClass[a4paper,twoside,openright]{report} 
 
-\RequirePackage{times}
+\RequirePackage{newtxtext}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{graphicx}
 \RequirePackage{geometry}
@@ -35,7 +35,7 @@
 \RequirePackage{enumitem}
 \RequirePackage[all,defaultlines=2]{nowidow} % Kontrola sierot i wdów - działa lepiej niż \widowpenalty i \clubpenalty
 
-\geometry{lmargin=30mm, rmargin=20mm, tmargin=30mm, bmargin=30mm, foot=10mm, head=10mm}
+\geometry{lmargin=35mm, rmargin=25mm, tmargin=25mm, bmargin=25mm, foot=10mm, head=10mm}
 \definecolor{Green}{rgb}{0.1,0.5,0.1}
 
 \def\shorttitlePL#1   {\gdef\@shorttitlePL{#1}}
@@ -51,7 +51,7 @@
 \def\degreeprogramme#1 {\gdef\@degreeprogramme{#1}}
 
 
-\linespread{1.3}
+%\linespread{1.3}
 \renewcommand{\labelitemi}{--}
 
 %------------------------------------------------------------------------------
@@ -92,16 +92,18 @@ Supervisor: & {\itshape \@supervisor}\\
 \begin{center}
 \vspace*{1.5cm}
 
-\begin{tabular}{m{20mm} m}
+\begin{tabular}{m{20mm} m{110mm}}
   
   \includegraphics[scale=0.3]{agh}
-  & \makecell{{\sffamily{\large{\bfseries \MakeUppercase{Akademia G\'{o}rniczo-Hutnicza}}\\\vspace{3mm}{\bfseries im. Stanis\l{}awa Staszica w Krakowie}}\\\vspace{3mm}\bfseries \MakeUppercase{\@faculty}}}\\
-  \hline
-
+  & \Large\bfseries\begin{minipage}[c]{0.7\columnwidth}\centering%
+    \MakeUppercase{Akademia G\'{o}rniczo-Hutnicza}\\\vspace{3mm}
+    im. Stanis\l{}awa Staszica w Krakowie\\\vspace{3mm}
+    \MakeUppercase{\@faculty}
+  \end{minipage}\vspace{3mm}\\\hline
 \end{tabular}
 
 
-\vspace*{3mm}
+\vspace*{10mm}
 
 {\sffamily\Large \@thesistype}
 \vspace*{9mm}
@@ -263,3 +265,7 @@ Supervisor: & {\itshape \@supervisor}\\
 \begin{description}[leftmargin=\eqwheremargin, itemsep=0cm, labelsep=0cm]
 }
 {\end{description}}
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "praca"
+%%% End: 
