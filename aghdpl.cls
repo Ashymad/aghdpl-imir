@@ -19,6 +19,7 @@
 \ProcessOptions\LoadClass[a4paper,oneside,openright]{report} 
 
 \RequirePackage{newtxtext}
+\RequirePackage{anyfontsize}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{graphicx}
 \RequirePackage{geometry}
@@ -61,25 +62,9 @@
 \fancyfoot[LE,RO]{\small \@shortauthor\quad\textit{\@shorttitlePL}}
 }
 
-\def\thesistable{
-\begin{tabular}{p{45mm}l}
-Autor: & {\itshape \@author}\\[-1mm]
-Kierunek studi\'{o}w: & {\itshape \@degreeprogramme}\\[-1mm]
-Opiekun pracy: & {\itshape \@supervisor}\\
-\end{tabular}
-}
-
 \DeclareOption{en}{
 \def\thesisheaders{
 \fancyfoot[LE,RO]{\small \@shortauthor\quad\textit{\@shorttitleEN}}
-}
-
-\def\thesistable{
-\begin{tabular}{p{45mm}l}
-Author: & {\itshape \@author}\\[-1mm]
-Degree programme: & {\itshape \@degreeprogramme}\\[-1mm]
-Supervisor: & {\itshape \@supervisor}\\
-\end{tabular}
 }
 }
 
@@ -103,26 +88,47 @@ Supervisor: & {\itshape \@supervisor}\\
 \end{tabular}
 
 
-\vspace*{10mm}
+\vspace*{36pt}
 
-{\sffamily\Large \@thesistype}
-\vspace*{9mm}
+{\fontsize{28}{30}\textbf{Praca dyplomowa}}
+\vspace*{2mm}
 
-{\sffamily\Large\itshape \@titlePL}
+{\fontsize{24}{26}\textbf{\@thesistype}}
+\vspace*{42pt}
+
+{\fontsize{22}{24}\textbf{\@author}}
 \vspace*{1mm}
 
-{\sffamily\Large\itshape \@titleEN}
+{\fontsize{14}{16}\textit{Imi\k{e} i nazwisko}}
+\vspace*{5mm}
+
+{\fontsize{14}{16}\textbf{\@degreeprogramme}}
+\vspace*{1mm}
+
+{\fontsize{14}{16}\textit{Kierunek studi\'{o}w}}
+\vspace*{10mm}
+
+{\fontsize{20}{22}\textbf{\@titlePL}}
+\vspace*{1mm}
+
+{\fontsize{14}{16}\textit{Temat pracy dyplomowej}}
+\vspace*{5mm}
+
 \vspace{\fill}
 \end{center}
 
+\fontsize{14}{16}
+\begin{tabular}{m{80mm} m{20mm} m{30mm}}
+
+	\centering\textbf{\@supervisor} &  & \dots\dots\dots\dots \\ 
+	
+	\centering\textit{Promotor Pracy} &  & \textit{Ocena} \\
+\end{tabular}
 \noindent
-{\sffamily
-\thesistable
-}
 
-\vspace*{17mm}
+\vspace*{28pt}
 
-\centerline{\small\sffamily Krak\'{o}w, \@date}
+\centerline{\rmfamily\fontsize{14}{16}\selectfont Krak\'{o}w, rok \@date}
 
 \clearpage 
 \thispagestyle{empty} 
