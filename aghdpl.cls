@@ -27,6 +27,7 @@
 \RequirePackage{url}
 \RequirePackage{titlesec}
 \RequirePackage{tocloft}
+\RequirePackage{setspace}
 
 \RequirePackage[font=small, labelfont=bf, labelsep=period]{caption}
 \RequirePackage{subcaption}
@@ -37,6 +38,7 @@
 
 \geometry{lmargin=35mm, rmargin=25mm, tmargin=25mm, bmargin=25mm, foot=10mm, head=10mm}
 \definecolor{Green}{rgb}{0.1,0.5,0.1}
+\setlength{\parindent}{10mm}
 
 \def\shorttitlePL#1   {\gdef\@shorttitlePL{#1}}
 \def\shorttitleEN#1   {\gdef\@shorttitleEN{#1}}
@@ -50,8 +52,7 @@
 \def\department#1   {\gdef\@department{#1}}
 \def\degreeprogramme#1 {\gdef\@degreeprogramme{#1}}
 
-
-%\linespread{1.3}
+\singlespacing
 \renewcommand{\labelitemi}{--}
 
 %------------------------------------------------------------------------------
@@ -103,16 +104,23 @@ Supervisor: & {\itshape \@supervisor}\\
 \end{tabular}
 
 
+\vspace*{15mm}
+
+{\bfseries\huge Praca dyplomowa}\\
+{\bfseries\LARGE\@thesistype}\\
+
+\vspace*{15mm}
+
+{\bfseries\LARGE\@author}\\
+{\itshape Imi\k{e} i nazwisko}
+
 \vspace*{10mm}
 
-{\sffamily\Large \@thesistype}
-\vspace*{9mm}
 
-{\sffamily\Large\itshape \@titlePL}
+
+{\Large\itshape \@titlePL}
 \vspace*{1mm}
 
-{\sffamily\Large\itshape \@titleEN}
-\vspace{\fill}
 \end{center}
 
 \noindent
