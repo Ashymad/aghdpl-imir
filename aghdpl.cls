@@ -301,7 +301,7 @@
 		{\bfseries\@facultyPL}
 	
 		{\onehalfspacing Kierunek: \@degreeprogrammePL \\
-		Profil dyplomowania: & \@specialisationPL}
+		Profil dyplomowania: \@specialisationPL}
 		\vspace*{12pt}
 
 		\@author \\
@@ -330,7 +330,7 @@
 		{\bfseries\@facultyEN}
 	
 		{\onehalfspacing Field of Study: \@degreeprogrammeEN \\
-		Specialisations: & \@specialisationEN}
+		Specialisations: \@specialisationEN}
 		\vspace*{12pt}
 
 		\@author \\
