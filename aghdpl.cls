@@ -184,8 +184,7 @@
 		Krak\'{o}w, \@date
 	\end{flushright}
 
-	\noindent
-	\begin{tabular}{m{46mm} l}
+	\noindent\begin{tabular}{l p{77mm}}
 		Imi\k{e} i nazwisko: & \@author \\
 		Adres korespondencyjny: & \@address \\
 		Temat pracy dyplomowej in{\.z}ynierskiej: & \@titlePL \\
