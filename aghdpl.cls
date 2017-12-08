@@ -41,24 +41,30 @@
 \definecolor{Green}{rgb}{0.1,0.5,0.1}
 \setlength{\parindent}{10mm}
 
-\def\shorttitlePL#1     {\gdef\@shorttitlePL{#1}}
-\def\shorttitleEN#1     {\gdef\@shorttitleEN{#1}}
-\def\shortauthor#1      {\gdef\@shortauthor{#1}}
-\def\titlePL#1          {\gdef\@titlePL{#1}}
-\def\titleEN#1          {\gdef\@titleEN{#1}}
-\def\faculty#1          {\gdef\@faculty{#1}}
-\def\thesistype#1       {\gdef\@thesistype{#1}}
-\def\supervisor#1       {\gdef\@supervisor{#1}}
-\def\reviewer#1         {\gdef\@reviewer{#1}}
-\def\acknowledgements#1 {\gdef\@acknowledgements{#1}}
-\def\department#1       {\gdef\@department{#1}}
-\def\degreeprogramme#1  {\gdef\@degreeprogramme{#1}}
-\def\years#1            {\gdef\@years{#1}}
-\def\albumnum#1         {\gdef\@albumnum{#1}}
-\def\specialization#1   {\gdef\@specialization{#1}}
-\def\address#1          {\gdef\@address{#1}}
-\def\graduationyear#1   {\gdef\@graduationyear{#1}}
-\def\yearofstudy#1      {\gdef\@yearofstudy{#1}}
+\def\shorttitlePL#1       {\gdef\@shorttitlePL{#1}}
+\def\shorttitleEN#1       {\gdef\@shorttitleEN{#1}}
+\def\shortauthor#1        {\gdef\@shortauthor{#1}}
+\def\titlePL#1            {\gdef\@titlePL{#1}}
+\def\titleEN#1            {\gdef\@titleEN{#1}}
+\def\facultyPL#1          {\gdef\@facultyPL{#1}}
+\def\facultyEN#1          {\gdef\@facultyEN{#1}}
+\def\thesistype#1         {\gdef\@thesistype{#1}}
+\def\supervisor#1         {\gdef\@supervisor{#1}}
+\def\reviewer#1           {\gdef\@reviewer{#1}}
+\def\acknowledgements#1   {\gdef\@acknowledgements{#1}}
+\def\department#1         {\gdef\@department{#1}}
+\def\degreeprogrammePL#1  {\gdef\@degreeprogrammePL{#1}}
+\def\degreeprogrammeEN#1  {\gdef\@degreeprogrammeEN{#1}}
+\def\years#1              {\gdef\@years{#1}}
+\def\albumnum#1           {\gdef\@albumnum{#1}}
+\def\specialisationPL#1   {\gdef\@specialisationPL{#1}}
+\def\specialisationEN#1   {\gdef\@specialisationEN{#1}}
+\def\address#1            {\gdef\@address{#1}}
+\def\graduationyear#1     {\gdef\@graduationyear{#1}}
+\def\yearofstudy#1        {\gdef\@yearofstudy{#1}}
+\def\summaryPL#1		  {\gdef\@summaryPL{#1}}
+\def\summaryEN#1		  {\gdef\@summaryEN{#1}}
+
 
 \renewcommand{\labelitemi}{--}
 
@@ -91,7 +97,7 @@
 		& \singlespacing\Large\bfseries\begin{minipage}[c]{0.7\columnwidth}\centering%
 			\MakeUppercase{Akademia G\'{o}rniczo-Hutnicza}\\\vspace{3mm}
 			im. Stanis\l{}awa Staszica w Krakowie\\\vspace{3mm}
-			\MakeUppercase{\@faculty}
+			\MakeUppercase{\@facultyPL}
 		\end{minipage}\vspace{3mm}\\\hline
 		\end{tabular}
 
@@ -109,7 +115,7 @@
 		{\fontsize{14}{16}\textit{Imi\k{e} i nazwisko}}
 		\vspace*{5mm}
 
-		{\fontsize{14}{16}\textbf{\@degreeprogramme}}
+		{\fontsize{14}{16}\textbf{\@degreeprogrammePL}}
 		\vspace*{1mm}
 
 		{\fontsize{14}{16}\textit{Kierunek studi\'{o}w}}
@@ -149,8 +155,8 @@
 	\begin{tabular}{m{31mm} l}
 		Imi\k{e} i nazwisko: & \@author \\
 		Nr. albumu: & \@albumnum \\
-		Kierunek studi\'{o}w: & \@degreeprogramme \\
-		Specjalno{\'s}{\'c}: & \@specialization \\
+		Kierunek studi\'{o}w: & \@degreeprogrammePL \\
+		Specjalno{\'s}{\'c}: & \@specialisationPL \\
 	\end{tabular}
 	\vspace*{28pt}
 
@@ -190,8 +196,8 @@
 		Temat pracy dyplomowej \@thesistype iej: & \@titlePL \\
 		Rok uko{\'n}czenia: & \@graduationyear \\
 		Nr. albumu: & \@albumnum \\
-		Kierunek studi\'{o}w: & \@degreeprogramme \\
-		Specjalno{\'s}{\'c}: & \@specialization \\
+		Kierunek studi\'{o}w: & \@degreeprogrammePL \\
+		Specjalno{\'s}{\'c}: & \@specialisationPL \\
 	\end{tabular}
 	\vspace*{28pt}
 
@@ -206,10 +212,10 @@
 	\vspace*{28pt}
 	
 	\begin{flushright}
-		\begin{tabular}{c c}
-			Krak{\'o}w, & \dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots \\
-			&\textit{data oraz podpis dyplomanta} \\
-		\end{tabular}
+		\begin{tabular}{l c c}
+            Krak\'ow, & \dots\dots\dots & \dots\dots\dots\dots\dots\dots \\
+                      & {\itshape data}      & {\itshape podpis dyplomanta} \\
+          \end{tabular}
 	\end{flushright}
 
 	\footnotetext{Na podstawie Ustawy z dnia 27 lipca 2005 r. Prawo o szkolnictwie wy{\.z}szym (Dz.U. 2005 nr 164 poz. 1365) Art. 239. oraz Ustawy z dnia 4 lutego 1994 r. o prawie autorskim i prawach pokrewnych (Dz.U. z 2000 r. Nr 80, poz. 904, z p{\'o}{\'z}n. zm.) Art. 15a. "Uczelni w rozumieniu przepis{\'o}w o szkolnictwie wy{\.z}szym przys{\l{}}uguje pierwsze{\'n}stwo w opublikowaniu pracy dyplomowej studenta. Je{\.z}eli uczelnia nie opublikowa{\l{}}a pracy dyplomowej w ci{\k{a}}gu 6 miesi{\k{e}}cy od jej obrony, student, kt{\'o}ry j{\k{e}} przygotowa{\l{}}, mo{\.z}e j{\k{a}} opublikowa{\'c}, chyba {\.z}e praca dyplomowa jest cz{\k{e}}{\'s}ci{\k{a}} utworu zbiorowego."}
@@ -228,7 +234,7 @@
 		\begin{center}
 
           {\bfseries\MakeUppercase{Akademia G\'{o}rniczo-Hutnicza}}\\
-          \indent{\bfseries\MakeUppercase{\@faculty}}
+          \indent{\bfseries\MakeUppercase{\@facultyPL}}
 
           \vspace*{8mm}
         
@@ -270,7 +276,7 @@
           \end{tabular}
         \end{flushright}
         \vspace*{8mm}
-        \centerline{{\bfseries TERMIN ODDANIA DO DZIEKANATU:}\hspace{20mm}\bfseries\dots\dots\dots\dots 20\dots r.}
+        \centerline{{\bfseries TERMIN ODDANIA DO DZIEKANATU:}\hspace{20mm}\dots\dots\dots\dots {\bfseries 20}\dots {\bfseries r.}}
         \vspace*{5mm}
         \begin{flushright}
           \begin{tabular}{c}
@@ -282,8 +288,62 @@
         
             
 	%--------------------------STRESZCZENIE--------------------------
+	
+	\clearpage 
+	\thispagestyle{empty}
+
+	\begin{flushright}
+		Krak\'{o}w, \@date
+	\end{flushright}
+
+	\begin{flushleft}
+		Akademia G{\'o}rniczo-Hutnicza im. Stanis{\l{}}awa Staszica \\
+		{\bfseries\@facultyPL}
+	
+		{\onehalfspacing Kierunek: \@degreeprogrammePL \\
+		Profil dyplomowania: & \@specialisationPL}
+		\vspace*{12pt}
+
+		\@author \\
+		{\bfseries Praca dyplomowa in{\.z}ynierska} \\
+		\@titlePL \\
+		Opiekun: \@supervisor \\
+	\end{flushleft}
+	\vspace*{24pt}
+	
+	\begin{center}
+		\MakeUppercase{Streszczenie} 
+	\end{center}
+	\@summaryPL	
 
 	%--------------------------SUMMARY--------------------------
+
+	\clearpage 
+	\thispagestyle{empty}
+
+	\begin{flushright}
+		Cracow, {\selectlanguage{english}\@date}
+	\end{flushright}
+
+	\begin{flushleft}
+		AGH University of Science and Technology \\
+		{\bfseries\@facultyEN}
+	
+		{\onehalfspacing Field of Study: \@degreeprogrammeEN \\
+		Specialisations: & \@specialisationEN}
+		\vspace*{12pt}
+
+		\@author \\
+		{\bfseries Engineering Diploma Thesis} \\
+		\@titleEN \\
+		Supervisor: \@supervisor \\
+	\end{flushleft}
+	\vspace*{24pt}
+	
+	\begin{center}
+		\MakeUppercase{Summary} 
+	\end{center}
+	\@summaryEN	
 
 	%--------------------------PODZIĘKOWANIA--------------------------
 
