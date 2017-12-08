@@ -116,15 +116,15 @@
 \vspace*{5mm}
 
 \vspace{\fill}
-\end{center}
 
 \fontsize{14}{16}
-\begin{tabular}{m{80mm} m{20mm} m{30mm}}
+\begin{tabular}{c m{30mm} c}
 
-	\centering\textbf{\@supervisor} &  & \dots\dots\dots\dots \\ 
+	\textbf{\@supervisor} &  & \dots\dots\dots\dots \\ 
 	
-	\centering\textit{Promotor Pracy} &  & \textit{Ocena} \\
+	\textit{Promotor Pracy} &  & \textit{Ocena} \\
 \end{tabular}
+\end{center}
 \noindent
 
 \vspace*{28pt}
@@ -175,7 +175,7 @@
 \frenchspacing
 \sloppy 
 \flushbottom
-
+\onehalfspacing
 
 %---------------------------------------------------------------------------
 % Ustawienia parametrów tytułów rozdziałów, podrozdziałów, itd.
