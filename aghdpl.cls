@@ -41,24 +41,25 @@
 \definecolor{Green}{rgb}{0.1,0.5,0.1}
 \setlength{\parindent}{10mm}
 
-\def\shorttitlePL#1   {\gdef\@shorttitlePL{#1}}
-\def\shorttitleEN#1   {\gdef\@shorttitleEN{#1}}
-\def\shortauthor#1    {\gdef\@shortauthor{#1}}
-\def\titlePL#1        {\gdef\@titlePL{#1}}
-\def\titleEN#1        {\gdef\@titleEN{#1}}
-\def\faculty#1      {\gdef\@faculty{#1}}
-\def\thesistype#1   {\gdef\@thesistype{#1}}
-\def\supervisor#1   {\gdef\@supervisor{#1}}
-\def\acknowledgements#1   {\gdef\@acknowledgements{#1}}
-\def\department#1   {\gdef\@department{#1}}
-\def\degreeprogramme#1 {\gdef\@degreeprogramme{#1}}
-\def\years#1		{\gdef\@years{#1}}
-\def\albumnum#1		{\gdef\@albumnum{#1}}
-\def\specialization#1	{\gdef\@specialization{#1}}
-\def\address#1		{\gdef\@address{#1}}
-\def\graduationyear#1	{\gdef\@graduationyear{#1}}
+\def\shorttitlePL#1     {\gdef\@shorttitlePL{#1}}
+\def\shorttitleEN#1     {\gdef\@shorttitleEN{#1}}
+\def\shortauthor#1      {\gdef\@shortauthor{#1}}
+\def\titlePL#1          {\gdef\@titlePL{#1}}
+\def\titleEN#1          {\gdef\@titleEN{#1}}
+\def\faculty#1          {\gdef\@faculty{#1}}
+\def\thesistype#1       {\gdef\@thesistype{#1}}
+\def\supervisor#1       {\gdef\@supervisor{#1}}
+\def\reviewer#1         {\gdef\@reviewer{#1}}
+\def\acknowledgements#1 {\gdef\@acknowledgements{#1}}
+\def\department#1       {\gdef\@department{#1}}
+\def\degreeprogramme#1  {\gdef\@degreeprogramme{#1}}
+\def\years#1            {\gdef\@years{#1}}
+\def\albumnum#1         {\gdef\@albumnum{#1}}
+\def\specialization#1   {\gdef\@specialization{#1}}
+\def\address#1          {\gdef\@address{#1}}
+\def\graduationyear#1   {\gdef\@graduationyear{#1}}
+\def\yearofstudy#1      {\gdef\@yearofstudy{#1}}
 
-\singlespacing
 \renewcommand{\labelitemi}{--}
 
 %------------------------------------------------------------------------------
@@ -76,7 +77,6 @@
 \ProcessOptions
 
 \newcommand{\titlepages}{%
-
 	%--------------------------STRONA TYTUŁOWA--------------------------
 
 	\newpage 
@@ -100,7 +100,7 @@
 		{\fontsize{28}{30}\textbf{Praca dyplomowa}}
 		\vspace*{2mm}
 
-		{\fontsize{24}{26}\textbf{\@thesistype}}
+		{\fontsize{24}{26}\textbf{\@thesistype a}}
 		\vspace*{42pt}
 
 		{\fontsize{22}{24}\textbf{\@author}}
@@ -160,11 +160,11 @@
 	\vspace*{16pt}
 
 	\setstretch{1.5}{
-		{\'S}wiadomy/a odpowiedzialno{\'s}ci karnej za po{\'s}wiadczanie nieprawdy o{\'s}wiadczam, {\.z}e niniejsz{\k{a}} in{\.z}yniersk{\k{a}} prac{\k{e}} dyplomow{\k{a}} wykona{\l{}}em/{\l{}}am osobi{\'s}cie i samodzielnie oraz nie korzysta{\l{}}em/{\l{}}am ze {\'z}r{\'o}de{\l{}} innych ni{\.z} wymienione w pracy.
+		{\'S}wiadomy/a odpowiedzialno{\'s}ci karnej za po{\'s}wiadczanie nieprawdy o{\'s}wiadczam, {\.z}e niniejsz{\k{a}} \@thesistype{\k{a}} prac{\k{e}} dyplomow{\k{a}} wykona{\l{}}em/{\l{}}am osobi{\'s}cie i samodzielnie oraz nie korzysta{\l{}}em/{\l{}}am ze {\'z}r{\'o}de{\l{}} innych ni{\.z} wymienione w pracy.
 
 		Jednocze{\'s}nie o{\'s}wiadczam, {\.z}e dokumentacja pracy nie narusza praw autorskich w rozumieniu ustawy z dnia 4 lutego 1994 roku o prawie autorskim i prawach pokrewnych (Dz. U. z 2006 r. Nr 90 poz. 631 z p{\'o}{\'z}niejszymi zmianami) oraz d{\'o}br osobistych chronionych prawem cywilnym. Nie zawiera ona r{\'o}wnie{\.z} danych i informacji, kt{\'o}re uzyska{\l{}}em/{\l{}}am w spos{\'o}b niedozwolony. Wersja dokumentacji do{\l{}}{\k{a}}czona przeze mnie na no{\'s}niku elektronicznym jest w pe{\l{}}ni zgodna z wydrukiem przedstawionym do recenzji.
 
-		Za{\'s}wiadczam tak{\.z}e, {\.z}e niniejsza in{\.z}ynierska praca dyplomowa nie by{\l{}}a wcze{\'s}niej podstaw{\k{a}} {\.z}adnej innej urz{\k{e}}dowej procedury zwi{\k{a}}zanej z nadawaniem dyplom{\'o}w wy{\.z}szej uczelni lub tytu{\l{}}{\'o}w zawodowych.
+		Za{\'s}wiadczam tak{\.z}e, {\.z}e niniejsza \@thesistype a praca dyplomowa nie by{\l{}}a wcze{\'s}niej podstaw{\k{a}} {\.z}adnej innej urz{\k{e}}dowej procedury zwi{\k{a}}zanej z nadawaniem dyplom{\'o}w wy{\.z}szej uczelni lub tytu{\l{}}{\'o}w zawodowych.
 	}
 	\vspace*{28pt}
 
@@ -187,7 +187,7 @@
 	\noindent\begin{tabular}{l p{77mm}}
 		Imi\k{e} i nazwisko: & \@author \\
 		Adres korespondencyjny: & \@address \\
-		Temat pracy dyplomowej in{\.z}ynierskiej: & \@titlePL \\
+		Temat pracy dyplomowej \@thesistype iej: & \@titlePL \\
 		Rok uko{\'n}czenia: & \@graduationyear \\
 		Nr. albumu: & \@albumnum \\
 		Kierunek studi\'{o}w: & \@degreeprogramme \\
@@ -201,7 +201,7 @@
 	\vspace*{16pt}
 
 	\setstretch{1.5}{
-		Niniejszym o{\'s}wiadczam, {\.z}e zachowuj{\k{a}}c moje prawa autorskie, udzielam Akademii G{\'o}rniczo-Hutniczej im. S. Staszica w Krakowie nieograniczonej w czasie nieodp{\l{}}atnej licencji niewy{\l{}}{\k{a}}cznej do korzystania z przedstawionej dokumentacji in{\.z}ynierskiej pracy dyplomowej, w zakresie publicznego udost{\k{e}}pniania i rozpowszechniania w wersji drukowanej i elektronicznej.\footnotemark
+		Niniejszym o{\'s}wiadczam, {\.z}e zachowuj{\k{a}}c moje prawa autorskie, udzielam Akademii G{\'o}rniczo-Hutniczej im. S. Staszica w Krakowie nieograniczonej w czasie nieodp{\l{}}atnej licencji niewy{\l{}}{\k{a}}cznej do korzystania z przedstawionej dokumentacji \@thesistype iej pracy dyplomowej, w zakresie publicznego udost{\k{e}}pniania i rozpowszechniania w wersji drukowanej i elektronicznej.\footnotemark
 	}
 	\vspace*{28pt}
 	
@@ -215,7 +215,72 @@
 	\footnotetext{Na podstawie Ustawy z dnia 27 lipca 2005 r. Prawo o szkolnictwie wy{\.z}szym (Dz.U. 2005 nr 164 poz. 1365) Art. 239. oraz Ustawy z dnia 4 lutego 1994 r. o prawie autorskim i prawach pokrewnych (Dz.U. z 2000 r. Nr 80, poz. 904, z p{\'o}{\'z}n. zm.) Art. 15a. "Uczelni w rozumieniu przepis{\'o}w o szkolnictwie wy{\.z}szym przys{\l{}}uguje pierwsze{\'n}stwo w opublikowaniu pracy dyplomowej studenta. Je{\.z}eli uczelnia nie opublikowa{\l{}}a pracy dyplomowej w ci{\k{a}}gu 6 miesi{\k{e}}cy od jej obrony, student, kt{\'o}ry j{\k{e}} przygotowa{\l{}}, mo{\.z}e j{\k{a}} opublikowa{\'c}, chyba {\.z}e praca dyplomowa jest cz{\k{e}}{\'s}ci{\k{a}} utworu zbiorowego."}
 
 	%--------------------------PLAN PRACY--------------------------
+	\clearpage 
+	\thispagestyle{empty}
 
+        \singlespacing
+
+	\begin{flushright}
+		Krak\'{o}w, \@date
+	\end{flushright}
+
+        \vspace*{2mm}
+
+        {\bfseries\MakeUppercase{Akademia G\'{o}rniczo-Hutnicza}}\\
+        \indent{\bfseries\MakeUppercase{\@faculty}}
+
+        \vspace*{8mm}
+        
+        \begin{center}
+          {\bfseries TEMATYKA PRACY DYPLOMOWEJ \MakeUppercase{\@thesistype}IEJ} \\ 
+          dla studenta \@yearofstudy~roku studi\'ow stacjonarnych
+          \vspace{5mm}
+
+          {\bfseries\@author} \\
+          {\itshape imi\k{e} i nazwisko studenta}\\
+          \vspace*{5mm}
+        \end{center}
+
+        \onehalfspacing
+        \noindent TEMAT PRACY DYPLOMOWEJ \MakeUppercase{\@thesistype iej}: \@titlePL \\
+        \vspace{10mm}
+        
+        \noindent\begin{tabular}{p{35mm} p{75mm} c}
+          {\itshape Promotor pracy:}  & \@supervisor & \\
+                                      &              & \dots\dots\dots\dots\dots \\
+          {\itshape Recenzent pracy:} & \@reviewer   & {\itshape podpis dziekana}\\
+        \end{tabular}
+
+        \vspace*{10mm}
+        \singlespacing
+        \noindent PLAN PRACY DYPLOMOWEJ
+        \begin{enumerate}
+            \itemsep-1mm 
+            \item Om\'owienie tematu pracy i sposobu realizacji z promotorem.
+            \item Zebranie i opracowanie literatury dotycz\k{a}cej tematu pracy.
+            \item Zebranie i opracowanie wynik\'ow bada\'n.
+            \item Analiza wynik\'ow bada\'n, ich om\'owienie i zatwierdzenie przez promotora.
+            \item Opracowanie redakcyjne.
+        \end{enumerate}
+        \vspace*{5mm}
+        \begin{flushright}
+          \begin{tabular}{l c c}
+            Krak\'ow, & \dots\dots\dots & \dots\dots\dots\dots\dots\dots \\
+                      & {\itshape data}      & {\itshape podpis dyplomanta} \\
+          \end{tabular}
+        \end{flushright}
+        \vspace*{8mm}
+        \centerline{{\bfseries TERMIN ODDANIA DO DZIEKANATU:}\hspace{20mm}\dots\dots\dots\dots 20\dots r.}
+        \vspace*{5mm}
+        \begin{flushright}
+          \begin{tabular}{c}
+            \dots\dots\dots\dots\dots\dots\dots \\
+            {\itshape podpis promotora} \\
+          \end{tabular}
+        \end{flushright}
+        
+        
+            
 	%--------------------------STRESZCZENIE--------------------------
 
 	%--------------------------SUMMARY--------------------------
