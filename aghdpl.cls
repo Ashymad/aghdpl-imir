@@ -55,6 +55,8 @@
 \def\years#1		{\gdef\@years{#1}}
 \def\albumnum#1		{\gdef\@albumnum{#1}}
 \def\specialization#1	{\gdef\@specialization{#1}}
+\def\address#1		{\gdef\@address{#1}}
+\def\graduationyear#1	{\gdef\@graduationyear{#1}}
 
 \singlespacing
 \renewcommand{\labelitemi}{--}
@@ -169,11 +171,49 @@
 	\begin{flushright}
 		\begin{tabular}{c}
 			\dots\dots\dots\dots\dots\dots\dots\dots\dots \\
-			\textit{Podpis dyplomanta} \\
+			\textit{podpis dyplomanta} \\
 		\end{tabular}
 	\end{flushright}
 
 	%--------------------------OŚWIADCZENIE O PRZEKAZANIU PRAW AUTORSKICH--------------------------
+
+	\clearpage 
+	\thispagestyle{empty}
+
+	\begin{flushright}
+		Krak\'{o}w, \@date
+	\end{flushright}
+
+	\noindent
+	\begin{tabular}{m{46mm} l}
+		Imi\k{e} i nazwisko: & \@author \\
+		Adres korespondencyjny: & \@address \\
+		Temat pracy dyplomowej in{\.z}ynierskiej: & \@titlePL \\
+		Rok uko{\'n}czenia: & \@graduationyear \\
+		Nr. albumu: & \@albumnum \\
+		Kierunek studi\'{o}w: & \@degreeprogramme \\
+		Specjalno{\'s}{\'c}: & \@specialization \\
+	\end{tabular}
+	\vspace*{28pt}
+
+	\begin{center}
+		\MakeUppercase{\textbf{O{\'s}wiadczenie}}
+	\end{center}
+	\vspace*{16pt}
+
+	\setstretch{1.5}{
+		Niniejszym o{\'s}wiadczam, {\.z}e zachowuj{\k{a}}c moje prawa autorskie, udzielam Akademii G{\'o}rniczo-Hutniczej im. S. Staszica w Krakowie nieograniczonej w czasie nieodp{\l{}}atnej licencji niewy{\l{}}{\k{a}}cznej do korzystania z przedstawionej dokumentacji in{\.z}ynierskiej pracy dyplomowej, w zakresie publicznego udost{\k{e}}pniania i rozpowszechniania w wersji drukowanej i elektronicznej.\footnotemark
+	}
+	\vspace*{28pt}
+	
+	\begin{flushright}
+		\begin{tabular}{c c}
+			Krak{\'o}w, & \dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots\dots \\
+			&\textit{data oraz podpis dyplomanta} \\
+		\end{tabular}
+	\end{flushright}
+
+	\footnotetext{Na podstawie Ustawy z dnia 27 lipca 2005 r. Prawo o szkolnictwie wy{\.z}szym (Dz.U. 2005 nr 164 poz. 1365) Art. 239. oraz Ustawy z dnia 4 lutego 1994 r. o prawie autorskim i prawach pokrewnych (Dz.U. z 2000 r. Nr 80, poz. 904, z p{\'o}{\'z}n. zm.) Art. 15a. "Uczelni w rozumieniu przepis{\'o}w o szkolnictwie wy{\.z}szym przys{\l{}}uguje pierwsze{\'n}stwo w opublikowaniu pracy dyplomowej studenta. Je{\.z}eli uczelnia nie opublikowa{\l{}}a pracy dyplomowej w ci{\k{a}}gu 6 miesi{\k{e}}cy od jej obrony, student, kt{\'o}ry j{\k{e}} przygotowa{\l{}}, mo{\.z}e j{\k{a}} opublikowa{\'c}, chyba {\.z}e praca dyplomowa jest cz{\k{e}}{\'s}ci{\k{a}} utworu zbiorowego."}
 
 	%--------------------------PLAN PRACY--------------------------
 
