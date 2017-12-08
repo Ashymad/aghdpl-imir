@@ -81,7 +81,7 @@
 \begin{tabular}{m{20mm} m{110mm}}
   
   \includegraphics[scale=0.3]{agh}
-  & \Large\bfseries\begin{minipage}[c]{0.7\columnwidth}\centering%
+  & \singlespacing\Large\bfseries\begin{minipage}[c]{0.7\columnwidth}\centering%
     \MakeUppercase{Akademia G\'{o}rniczo-Hutnicza}\\\vspace{3mm}
     im. Stanis\l{}awa Staszica w Krakowie\\\vspace{3mm}
     \MakeUppercase{\@faculty}
