@@ -225,13 +225,13 @@
 	\end{flushright}
 
         \vspace*{2mm}
+		\begin{center}
 
-        {\bfseries\MakeUppercase{Akademia G\'{o}rniczo-Hutnicza}}\\
-        \indent{\bfseries\MakeUppercase{\@faculty}}
+          {\bfseries\MakeUppercase{Akademia G\'{o}rniczo-Hutnicza}}\\
+          \indent{\bfseries\MakeUppercase{\@faculty}}
 
-        \vspace*{8mm}
+          \vspace*{8mm}
         
-        \begin{center}
           {\bfseries TEMATYKA PRACY DYPLOMOWEJ \MakeUppercase{\@thesistype}IEJ} \\ 
           dla studenta \@yearofstudy~roku studi\'ow stacjonarnych
           \vspace{5mm}
@@ -270,7 +270,7 @@
           \end{tabular}
         \end{flushright}
         \vspace*{8mm}
-        \centerline{{\bfseries TERMIN ODDANIA DO DZIEKANATU:}\hspace{20mm}\dots\dots\dots\dots 20\dots r.}
+        \centerline{{\bfseries TERMIN ODDANIA DO DZIEKANATU:}\hspace{20mm}\bfseries\dots\dots\dots\dots 20\dots r.}
         \vspace*{5mm}
         \begin{flushright}
           \begin{tabular}{c}
