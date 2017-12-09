@@ -2,9 +2,11 @@
 % 
 % File:     aghdpl.cls           (LaTeX Document class option "aghdpl")
 %          
-% Author:  Marcin Szpyrka     (mszpyrka@agh.edu.pl)
+% Authors: Marcin Szpyrka     (mszpyrka@agh.edu.pl)
 %          Grzegorz J. Nalepa (gjn@agh.edu.pl)
 %          Paweł Kłeczek      (p.l.kleczek@gmail.com)
+%          Szymon Mikulicz    (czilukim@o2.pl)
+%          Marcel Piszak      (marcel.piszak@wp.pl)
 %          AGH University of Science and Technology, Kraków, POLAND
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
