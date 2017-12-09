@@ -28,6 +28,7 @@
 \RequirePackage{url}
 \RequirePackage{titlesec}
 \RequirePackage{tocloft}
+\RequirePackage{mfirstuc}
 \RequirePackage{setspace}
 
 \RequirePackage[font=small, labelfont=bf, labelsep=period]{caption}
@@ -48,7 +49,8 @@
 \def\titleEN#1            {\gdef\@titleEN{#1}}
 \def\facultyPL#1          {\gdef\@facultyPL{#1}}
 \def\facultyEN#1          {\gdef\@facultyEN{#1}}
-\def\thesistype#1         {\gdef\@thesistype{#1}}
+\def\thesistypePL#1       {\gdef\@thesistypePL{#1}}
+\def\thesistypeEN#1       {\gdef\@thesistypeEN{#1}}
 \def\supervisor#1         {\gdef\@supervisor{#1}}
 \def\reviewer#1           {\gdef\@reviewer{#1}}
 \def\acknowledgements#1   {\gdef\@acknowledgements{#1}}
@@ -62,8 +64,8 @@
 \def\address#1            {\gdef\@address{#1}}
 \def\graduationyear#1     {\gdef\@graduationyear{#1}}
 \def\yearofstudy#1        {\gdef\@yearofstudy{#1}}
-\def\summaryPL#1		  {\gdef\@summaryPL{#1}}
-\def\summaryEN#1		  {\gdef\@summaryEN{#1}}
+\def\summaryPL#1          {\gdef\@summaryPL{#1}}
+\def\summaryEN#1          {\gdef\@summaryEN{#1}}
 
 
 \renewcommand{\labelitemi}{--}
@@ -106,7 +108,7 @@
 		{\fontsize{28}{30}\textbf{Praca dyplomowa}}
 		\vspace*{2mm}
 
-		{\fontsize{24}{26}\textbf{\@thesistype a}}
+		{\fontsize{24}{26}\textbf{\@thesistypePL a}}
 		\vspace*{42pt}
 
 		{\fontsize{22}{24}\textbf{\@author}}
@@ -166,11 +168,11 @@
 	\vspace*{16pt}
 
 	\setstretch{1.5}{
-		{\'S}wiadomy/a odpowiedzialno{\'s}ci karnej za po{\'s}wiadczanie nieprawdy o{\'s}wiadczam, {\.z}e niniejsz{\k{a}} \@thesistype{\k{a}} prac{\k{e}} dyplomow{\k{a}} wykona{\l{}}em/{\l{}}am osobi{\'s}cie i samodzielnie oraz nie korzysta{\l{}}em/{\l{}}am ze {\'z}r{\'o}de{\l{}} innych ni{\.z} wymienione w pracy.
+		{\'S}wiadomy/a odpowiedzialno{\'s}ci karnej za po{\'s}wiadczanie nieprawdy o{\'s}wiadczam, {\.z}e niniejsz{\k{a}} \@thesistypePL{\k{a}} prac{\k{e}} dyplomow{\k{a}} wykona{\l{}}em/{\l{}}am osobi{\'s}cie i samodzielnie oraz nie korzysta{\l{}}em/{\l{}}am ze {\'z}r{\'o}de{\l{}} innych ni{\.z} wymienione w pracy.
 
 		Jednocze{\'s}nie o{\'s}wiadczam, {\.z}e dokumentacja pracy nie narusza praw autorskich w rozumieniu ustawy z dnia 4 lutego 1994 roku o prawie autorskim i prawach pokrewnych (Dz. U. z 2006 r. Nr 90 poz. 631 z p{\'o}{\'z}niejszymi zmianami) oraz d{\'o}br osobistych chronionych prawem cywilnym. Nie zawiera ona r{\'o}wnie{\.z} danych i informacji, kt{\'o}re uzyska{\l{}}em/{\l{}}am w spos{\'o}b niedozwolony. Wersja dokumentacji do{\l{}}{\k{a}}czona przeze mnie na no{\'s}niku elektronicznym jest w pe{\l{}}ni zgodna z wydrukiem przedstawionym do recenzji.
 
-		Za{\'s}wiadczam tak{\.z}e, {\.z}e niniejsza \@thesistype a praca dyplomowa nie by{\l{}}a wcze{\'s}niej podstaw{\k{a}} {\.z}adnej innej urz{\k{e}}dowej procedury zwi{\k{a}}zanej z nadawaniem dyplom{\'o}w wy{\.z}szej uczelni lub tytu{\l{}}{\'o}w zawodowych.
+		Za{\'s}wiadczam tak{\.z}e, {\.z}e niniejsza \@thesistypePL a praca dyplomowa nie by{\l{}}a wcze{\'s}niej podstaw{\k{a}} {\.z}adnej innej urz{\k{e}}dowej procedury zwi{\k{a}}zanej z nadawaniem dyplom{\'o}w wy{\.z}szej uczelni lub tytu{\l{}}{\'o}w zawodowych.
 	}
 	\vspace*{28pt}
 
@@ -193,7 +195,7 @@
 	\noindent\begin{tabular}{l p{77mm}}
 		Imi\k{e} i nazwisko: & \@author \\
 		Adres korespondencyjny: & \@address \\
-		Temat pracy dyplomowej \@thesistype iej: & \@titlePL \\
+		Temat pracy dyplomowej \@thesistypePL iej: & \@titlePL \\
 		Rok uko{\'n}czenia: & \@graduationyear \\
 		Nr. albumu: & \@albumnum \\
 		Kierunek studi\'{o}w: & \@degreeprogrammePL \\
@@ -207,7 +209,7 @@
 	\vspace*{16pt}
 
 	\setstretch{1.5}{
-		Niniejszym o{\'s}wiadczam, {\.z}e zachowuj{\k{a}}c moje prawa autorskie, udzielam Akademii G{\'o}rniczo-Hutniczej im. S. Staszica w Krakowie nieograniczonej w czasie nieodp{\l{}}atnej licencji niewy{\l{}}{\k{a}}cznej do korzystania z przedstawionej dokumentacji \@thesistype iej pracy dyplomowej, w zakresie publicznego udost{\k{e}}pniania i rozpowszechniania w wersji drukowanej i elektronicznej.\footnotemark
+		Niniejszym o{\'s}wiadczam, {\.z}e zachowuj{\k{a}}c moje prawa autorskie, udzielam Akademii G{\'o}rniczo-Hutniczej im. S. Staszica w Krakowie nieograniczonej w czasie nieodp{\l{}}atnej licencji niewy{\l{}}{\k{a}}cznej do korzystania z przedstawionej dokumentacji \@thesistypePL iej pracy dyplomowej, w zakresie publicznego udost{\k{e}}pniania i rozpowszechniania w wersji drukowanej i elektronicznej.\footnotemark
 	}
 	\vspace*{28pt}
 	
@@ -238,7 +240,7 @@
 
           \vspace*{8mm}
         
-          {\bfseries TEMATYKA PRACY DYPLOMOWEJ \MakeUppercase{\@thesistype}IEJ} \\ 
+          {\bfseries TEMATYKA PRACY DYPLOMOWEJ \MakeUppercase{\@thesistypePL}IEJ} \\ 
           dla studenta \@yearofstudy~roku studi\'ow stacjonarnych
           \vspace{5mm}
 
@@ -248,7 +250,7 @@
         \end{center}
 
         \onehalfspacing
-        \noindent TEMAT PRACY DYPLOMOWEJ \MakeUppercase{\@thesistype iej}: \@titlePL \\
+        \noindent TEMAT PRACY DYPLOMOWEJ \MakeUppercase{\@thesistypePL iej}: \@titlePL \\
         \vspace{10mm}
         
         \noindent\begin{tabular}{p{35mm} p{75mm} c}
@@ -305,7 +307,7 @@
 		\vspace*{12pt}
 
 		\@author \\
-		{\bfseries Praca dyplomowa in{\.z}ynierska} \\
+		{\bfseries Praca dyplomowa \@thesistypePL a} \\
 		\@titlePL \\
 		Opiekun: \@supervisor \\
 	\end{flushleft}
@@ -314,6 +316,7 @@
 	\begin{center}
 		\MakeUppercase{Streszczenie} 
 	\end{center}
+        \onehalfspacing
 	\@summaryPL	
 
 	%--------------------------SUMMARY--------------------------
@@ -334,7 +337,7 @@
 		\vspace*{12pt}
 
 		\@author \\
-		{\bfseries Engineering Diploma Thesis} \\
+		{\bfseries \xmakefirstuc\@thesistypeEN~Diploma Thesis} \\
 		\@titleEN \\
 		Supervisor: \@supervisor \\
 	\end{flushleft}
@@ -343,6 +346,7 @@
 	\begin{center}
 		\MakeUppercase{Summary} 
 	\end{center}
+        \onehalfspacing
 	\@summaryEN	
 
 	%--------------------------PODZIĘKOWANIA--------------------------
