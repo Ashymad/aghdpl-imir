@@ -211,9 +211,9 @@
 	\vspace*{16pt}
 
 	\setstretch{1.5}{
-		Niniejszym o{\'s}wiadczam, {\.z}e zachowuj{\k{a}}c moje prawa autorskie, udzielam Akademii G{\'o}rniczo-Hutniczej im. S. Staszica w Krakowie nieograniczonej w czasie nieodp{\l{}}atnej licencji niewy{\l{}}{\k{a}}cznej do korzystania z przedstawionej dokumentacji \@thesistypePL iej pracy dyplomowej, w zakresie publicznego udost{\k{e}}pniania i rozpowszechniania w wersji drukowanej i elektronicznej.\footnotemark
+		Niniejszym o{\'s}wiadczam, {\.z}e zachowuj{\k{a}}c moje prawa autorskie, udzielam Akademii G{\'o}rniczo-Hutniczej im. S. Staszica w Krakowie nieograniczonej w czasie nieodp{\l{}}atnej licencji niewy{\l{}}{\k{a}}cznej do korzystania z przedstawionej dokumentacji \@thesistypePL iej pracy dyplomowej, w zakresie publicznego udost{\k{e}}pniania i rozpowszechniania w wersji drukowanej i elektronicznej\footnotemark. Publikacja ta mo\.ze nast{\k{a}}pi\'c po ewentualnym zg{\l{}}oszeniu do ochrony prawnej wynalazk\'ow, wzor\'ow u\.zytkowych, wzor\'ow przemys{\l{}}owych b{\k{e}}d{\k{a}}cych wynikiem pracy in\.zynierskiej\footnotemark.
 	}
-	\vspace*{28pt}
+	\vspace*{10pt}
 	
 	\begin{flushright}
 		\begin{tabular}{l c c}
@@ -222,7 +222,8 @@
           \end{tabular}
 	\end{flushright}
 
-	\footnotetext{Na podstawie Ustawy z dnia 27 lipca 2005 r. Prawo o szkolnictwie wy{\.z}szym (Dz.U. 2005 nr 164 poz. 1365) Art. 239. oraz Ustawy z dnia 4 lutego 1994 r. o prawie autorskim i prawach pokrewnych (Dz.U. z 2000 r. Nr 80, poz. 904, z p{\'o}{\'z}n. zm.) Art. 15a. "Uczelni w rozumieniu przepis{\'o}w o szkolnictwie wy{\.z}szym przys{\l{}}uguje pierwsze{\'n}stwo w opublikowaniu pracy dyplomowej studenta. Je{\.z}eli uczelnia nie opublikowa{\l{}}a pracy dyplomowej w ci{\k{a}}gu 6 miesi{\k{e}}cy od jej obrony, student, kt{\'o}ry j{\k{e}} przygotowa{\l{}}, mo{\.z}e j{\k{a}} opublikowa{\'c}, chyba {\.z}e praca dyplomowa jest cz{\k{e}}{\'s}ci{\k{a}} utworu zbiorowego."}
+	\footnotetext[1]{Na podstawie Ustawy z dnia 27 lipca 2005 r. o prawie o szkolnictwie wy{\.z}szym (Dz.U. z 2005 Nr 164, poz. 1365) Art. 239 oraz Ustawy z dnia 4 lutego 1994 r. o prawie autorskim i prawach pokrewnych (Dz.U. 2000 r. Nr 80, poz. 904, z p{\'o}{\'z}n. zm.) Art. 15a: "Uczelni w rozumieniu przepis{\'o}w o szkolnictwie wy{\.z}szym przys{\l{}}uguje pierwsze{\'n}stwo w opublikowaniu pracy dyplomowej studenta. Je{\.z}eli uczelnia nie opublikowa{\l{}}a pracy dyplomowej w ci{\k{a}}gu 6 miesi{\k{e}}cy od jej obrony, student, kt{\'o}ry j{\k{e}} przygotowa{\l{}}, mo{\.z}e j{\k{a}} opublikowa{\'c}, chyba {\.z}e praca dyplomowa jest cz{\k{e}}{\'s}ci{\k{a}} utworu zbiorowego."}
+        \footnotetext[2]{Ustawa z dnia 30 czerwca 2000 r. -- prawo w{\l{}}asno\'sci przemys{\l{}}owej (Dz.U. z 2003 r. Nr 119, poz. 1117, z p\'o\'zn. zm.), a tak\.ze rozporz{\k{a}}dzenie Prezesa Rady Ministr\'ow z dnia 17 wrze\'snia 2001 r. w sprawie dokonywania i rozpatrywania zg{\l{}}osze\'n wynalazk\'ow i wzor\'ow u\.zytkowych (Dz.U. z 2001 r. Nr 102, poz. 1119 oraz z 2005 r. Nr 109, poz. 910).}
 
 	%--------------------------PLAN PRACY--------------------------
 	\clearpage 
