@@ -146,7 +146,42 @@
 
 	\centerline{\rmfamily\fontsize{14}{16}\selectfont Krak\'{o}w, rok \@years}
 
-	%--------------------------OŚWIADCZENIE O WYKONANIU--------------------------
+	%--------------------------OŚWIADCZENIE O ODPOWIEDZIALNOŚCI KARNEJ--------------------------
+
+	\clearpage 
+	\thispagestyle{empty}
+
+	\begin{flushright}
+		Krak\'{o}w, \@date
+	\end{flushright}
+
+	\noindent
+	\begin{tabular}{m{38mm} l}
+		Imi\k{e} i nazwisko: & \@author \\
+		Nr albumu: & \@albumnum \\
+		Kierunek studi\'{o}w: & \@degreeprogrammePL \\
+		Profil dyplomowania: & \@specialisationPL \\
+	\end{tabular}
+	\vspace*{28pt}
+
+	\begin{center}
+		\MakeUppercase{\textbf{O{\'s}wiadczenie}}
+	\end{center}
+	\vspace*{16pt}
+
+	{\bfseries\singlespacing
+		Uprzedzony o odpowiedzialno{\'s}ci karnej na podstawie art. 115 ust 1 i 2 ustawy z dnia 4 lutego 1994 r. o prawie autorskim i prawach pokrewnych (tj. Dz.U.z 2006 r. Nr 90, poz. 631 z p{\'o}{\'z}n.zm.): ,,Kto przyw{\l{}}aszcza sobie autorstwo albo wprowadza w b{\l{}}{\k{a}}d co do autorstwa ca{\l{}}o{\'s}ci lub cz{\k{e}}{\'s}ci cudzego utworu albo artystycznego wykonania, podlega grzywnie, karze ograniczenia wolno{\'s}ci albo pozbawienia wolno{\'s}ci do lat 3. Tej samej karze podlega, kto rozpowszechnia bez podania nazwiska lub pseudonimu tw{\'o}rcy cudzy utw{\'o}r w wersji oryginalnej albo w postaci opracowania, artystyczne wykonanie albo publicznie zniekszta{\l{}}ca taki utw{\'o}r, artystyczne wykonanie, fonogram, wideogram lub  nadanie'', a tak{\.z}e uprzedzony o odpowiedzialno{\'s}ci dyscyplinarnej na podstawie art. 211 ust.1 ustawy z dnia 27 lip[ca 2005 r. Prawo o szkolnictwie wy{\.z}szym (tj. Dz.U. z 2012 r. poz. 572, z p{\'o}{\'z}n.zm.) ,,Za naruszenie przepis{\'o}w obowi{\k{a}}zuj{\k{a}}cych w uczelni oraz za czyny uchybiaj{\k{a}}ce godno{\'s}ci student ponosi odpowiedzialno{\'s}{\'c} dyscyplinarn{\k{a}} przed komisj{\k{a}} dyscyplinarn{\k{a}} albo przed s{\k{a}}dem kole{\.z}e{\'n}skim samorz{\k{a}}du studenckiego, zwanym dalej ,,s{\k{a}}dem kole{\.z}e{\'n}skim'', o{\'s}wiadczam, {\.z}e niniejsz{\k{a}} prac{\k{e}} dyplomow{\k{a}} wykona{\l{}}em(-am) osobi{\'s}cie i samodzielnie i {\.z}e nie korzysta{\l{}}em (-am) ze {\'z}r{\'o}de{\l{}} innych ni{\.z} wymienione w pracy''.
+	}
+	\vspace*{28pt}
+	
+	\begin{flushright}
+		\begin{tabular}{c}
+			\dots\dots\dots\dots\dots\dots\dots\dots\dots \\
+			\textit{podpis dyplomanta} \\
+		\end{tabular}
+	\end{flushright}
+
+	%--------------------------OŚWIADCZENIE O SAMODZIELNYM WYKONANIU--------------------------
 
 	\clearpage 
 	\thispagestyle{empty} 
