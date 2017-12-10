@@ -13,4 +13,4 @@ Założenia, wymagania i zasady realizacji w postaci [pdf](http://www.imir.agh.e
 3. [doc](http://www.imir.agh.edu.pl/modules/media/z3_oswiadczenie_autorstwo-1.docx), [pdf](http://www.imir.agh.edu.pl/modules/media/z3_oswiadczenie_autorstwo-1.pdf) 
 4. [doc](http://www.imir.agh.edu.pl/modules/media/z4_oswiadczenie_prawo_publikacji-1.docx), [pdf](http://www.imir.agh.edu.pl/modules/media/z4_oswiadczenie_prawo_publikacji-1.pdf) 
 5. [doc](http://www.imir.agh.edu.pl/modules/media/z5_tematyka_pracy_inz_v3.doc), [pdf](http://www.imir.agh.edu.pl/modules/media/z5_tematyka_pracy_inz_v3.pdf) 
-6. (7) [doc](http://www.imir.agh.edu.pl/modules/media/z6_streszczenie_pracy_inz.doc), [pdf](http://www.imir.agh.edu.pl/modules/media/z6_streszczenie_pracy_inz.pdf) 
+6. i 7. [doc](http://www.imir.agh.edu.pl/modules/media/z6_streszczenie_pracy_inz.doc), [pdf](http://www.imir.agh.edu.pl/modules/media/z6_streszczenie_pracy_inz.pdf) 
