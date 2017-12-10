@@ -68,6 +68,7 @@
 \def\yearofstudy#1        {\gdef\@yearofstudy{#1}}
 \def\summaryPL#1          {\gdef\@summaryPL{#1}}
 \def\summaryEN#1          {\gdef\@summaryEN{#1}}
+\def\thesisplan#1         {\gdef\@thesisplan{#1}}
 
 
 \renewcommand{\labelitemi}{--}
@@ -299,15 +300,8 @@
 
         \vspace*{10mm}
         \singlespacing
-        \noindent PLAN PRACY DYPLOMOWEJ
-        \begin{enumerate}
-            \itemsep-1mm 
-            \item Om\'owienie tematu pracy i sposobu realizacji z promotorem.
-            \item Zebranie i opracowanie literatury dotycz\k{a}cej tematu pracy.
-            \item Zebranie i opracowanie wynik\'ow bada\'n.
-            \item Analiza wynik\'ow bada\'n, ich om\'owienie i zatwierdzenie przez promotora.
-            \item Opracowanie redakcyjne.
-        \end{enumerate}
+        \noindent PLAN PRACY DYPLOMOWEJ:
+        \@thesisplan
         \vspace*{5mm}
         \begin{flushright}
           \begin{tabular}{l c c}
