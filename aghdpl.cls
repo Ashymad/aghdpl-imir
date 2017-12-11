@@ -81,12 +81,16 @@
 
 \def\thesisheaders{
 	\fancyfoot[LE,RO]{\small \@shortauthor\quad\textit{\@shorttitlePL}}
+        \def\thesistitles{{\fontsize{20}{22}\textbf{\@titlePL}}}
 }
+
 
 \DeclareOption{en}{
 	\def\thesisheaders{
 		\fancyfoot[LE,RO]{\small \@shortauthor\quad\textit{\@shorttitleEN}}
 	}
+        \def\thesistitles{{\fontsize{20}{22}\textbf{\@titlePL}}\\\vspace*{2mm}
+                          {\fontsize{20}{22}\textbf{\@titleEN}}}
 }
 
 \ProcessOptions
@@ -130,7 +134,7 @@
 		{\fontsize{14}{16}\textit{Kierunek studi\'{o}w}}
 		\vspace*{10mm}
 
-		{\fontsize{20}{22}\textbf{\@titlePL}}
+                \thesistitles
 		\vspace*{1mm}
 
 		{\fontsize{14}{16}\textit{Temat pracy dyplomowej}}	
