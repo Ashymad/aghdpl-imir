@@ -401,11 +401,8 @@
 	\end{flushright}
 
 	\clearpage
-	\thispagestyle{empty}
-	\vspace*{15cm} \vfill
-	\clearpage
 
-	\setcounter{page}{5}
+	\setcounter{page}{9}
 
 }
 
