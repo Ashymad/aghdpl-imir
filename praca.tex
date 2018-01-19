@@ -16,6 +16,10 @@
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{amsthm}
+\usepackage{float}% do umieszczenia floatów [H]
+\usepackage{enumitem}
+\setlist{nosep} % or \setlist{noitemsep} to leave space around whole list
+\usepackage[bookmarks,hidelinks]{hyperref}
 
 % --- < bibliografia > ---
 
@@ -62,7 +66,7 @@ backend=biber
 \lstloadlanguages{TeX}
 
 \lstset{
-	literate={ą}{{\k{a}}}1
+        literate={ą}{{\k{a}}}1
            {ć}{{\'c}}1
            {ę}{{\k{e}}}1
            {ó}{{\'o}}1
@@ -80,14 +84,14 @@ backend=biber
            {Ś}{{\'S}}1
            {Ź}{{\'Z}}1
            {Ż}{{\.Z}}1,
-	basicstyle=\footnotesize\ttfamily,
+        basicstyle=\footnotesize\ttfamily,
 }
 
 % ------------------------
 
 \AtBeginDocument{
-	\renewcommand{\tablename}{Tab.}
-	\renewcommand{\figurename}{Rys.}
+        \renewcommand{\tablename}{Tab.}
+        \renewcommand{\figurename}{Rys.}
 }
 
 % ------------------------
@@ -174,11 +178,11 @@ backend=biber
 % Ponowne zdefiniowanie stylu `plain`, aby usunąć numer strony z pierwszej strony spisu treści i poszczególnych rozdziałów.
 \fancypagestyle{plain}
 {
-	% Usuń nagłówek i stopkę
-	\fancyhf{}
-	% Usuń linie.
-	\renewcommand{\headrulewidth}{0pt}
-	\renewcommand{\footrulewidth}{0pt}
+        % Usuń nagłówek i stopkę
+        \fancyhf{}
+        % Usuń linie.
+        \renewcommand{\headrulewidth}{0pt}
+        \renewcommand{\footrulewidth}{0pt}
 }
 
 \setcounter{tocdepth}{2}
