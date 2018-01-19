@@ -31,6 +31,24 @@
 \fi
 \floatname{program}{Kod źr.}
 
+% Kod poniżej powoduje, że floaty nie wylatują poza granice sekcji
+
+\usepackage{placeins}
+
+\ifcsname{chapter}\endcsname%
+    \let\Oldchapter\chapter
+    \renewcommand{\chapter}{\FloatBarrier\Oldchapter}
+\fi
+
+\let\Oldsection\section
+\renewcommand{\section}{\FloatBarrier\Oldsection}
+
+\let\Oldsubsection\subsection
+\renewcommand{\subsection}{\FloatBarrier\Oldsubsection}
+
+\let\Oldsubsubsection\subsubsection
+\renewcommand{\subsubsection}{\FloatBarrier\Oldsubsubsection}
+
 % --- < bibliografia > ---
 
 
