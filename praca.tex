@@ -21,6 +21,16 @@
 \setlist{nosep} % or \setlist{noitemsep} to leave space around whole list
 \usepackage[bookmarks,hidelinks]{hyperref}
 
+% Środowisko float do kodu źródłowego \begin{program}
+
+\floatstyle{plaintop}
+\ifcsname{chapter}\endcsname%
+    \newfloat{program}{!tbh}{lop}[chapter]
+\else%
+    \newfloat{program}{!tbh}{lop}
+\fi
+\floatname{program}{Kod źr.}
+
 % --- < bibliografia > ---
 
 
