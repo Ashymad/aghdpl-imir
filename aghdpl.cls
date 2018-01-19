@@ -216,7 +216,7 @@
         \setstretch{1.5}{
                 {\'S}wiadom\ya~odpowiedzialno{\'s}ci karnej za po{\'s}wiadczanie nieprawdy o{\'s}wiadczam, {\.z}e niniejsz{\k{a}} \@thesistypePL{\k{a}} prac{\k{e}} dyplomow{\k{a}} wykona{\l{}}\ea m osobi{\'s}cie i samodzielnie oraz nie korzysta{\l{}}\ea m ze {\'z}r{\'o}de{\l{}} innych ni{\.z} wymienione w pracy.
 
-                Jednocze{\'s}nie o{\'s}wiadczam, {\.z}e dokumentacja pracy nie narusza praw autorskich w rozumieniu ustawy z dnia 4 lutego 1994 roku o prawie autorskim i prawach pokrewnych (Dz. U. z 2006 r. Nr 90 poz. 631 z p{\'o}{\'z}niejszymi zmianami) oraz d{\'o}br osobistych chronionych prawem cywilnym. Nie zawiera ona r{\'o}wnie{\.z} danych i informacji, kt{\'o}re uzyska{\l{}}\ea m w spos{\'o}b niedozwolony. Wersja dokumentacji do{\l{}}{\k{a}}czona przeze mnie na no{\'s}niku elektronicznym jest w pe{\l{}}ni zgodna z wydrukiem przedstawionym do recenzji.
+                Jednocze{\'s}nie o{\'s}wiadczam, {\.z}e dokumentacja pracy nie narusza praw autorskich w~rozumieniu ustawy z dnia 4 lutego 1994 roku o prawie autorskim i prawach pokrewnych (Dz. U. z 2006 r. Nr 90 poz. 631 z p{\'o}{\'z}niejszymi zmianami) oraz d{\'o}br osobistych chronionych prawem cywilnym. Nie zawiera ona r{\'o}wnie{\.z} danych i informacji, kt{\'o}re uzyska{\l{}}\ea m w spos{\'o}b niedozwolony. Wersja dokumentacji do{\l{}}{\k{a}}czona przeze mnie na no{\'s}niku elektronicznym jest w pe{\l{}}ni zgodna z wydrukiem przedstawionym do recenzji.
 
                 Za{\'s}wiadczam tak{\.z}e, {\.z}e niniejsza \@thesistypePL a praca dyplomowa nie by{\l{}}a wcze{\'s}niej podstaw{\k{a}} {\.z}adnej innej urz{\k{e}}dowej procedury zwi{\k{a}}zanej z nadawaniem dyplom{\'o}w wy{\.z}szej uczelni lub tytu{\l{}}{\'o}w zawodowych.
         }
@@ -255,7 +255,9 @@
         \vspace*{16pt}
 
         \setstretch{1.5}{
-                Niniejszym o{\'s}wiadczam, {\.z}e zachowuj{\k{a}}c moje prawa autorskie, udzielam Akademii G{\'o}rniczo-Hutniczej im. S. Staszica w Krakowie nieograniczonej w czasie nieodp{\l{}}atnej licencji niewy{\l{}}{\k{a}}cznej do korzystania z przedstawionej dokumentacji \@thesistypePL iej pracy dyplomowej, w zakresie publicznego udost{\k{e}}pniania i rozpowszechniania w wersji drukowanej i elektronicznej\footnotemark. Publikacja ta mo\.ze nast{\k{a}}pi\'c po ewentualnym zg{\l{}}oszeniu do ochrony prawnej wynalazk\'ow, wzor\'ow u\.zytkowych, wzor\'ow przemys{\l{}}owych b{\k{e}}d{\k{a}}cych wynikiem pracy in\.zynierskiej\footnotemark.
+                Niniejszym o{\'s}wiadczam, {\.z}e zachowuj{\k{a}}c moje prawa autorskie, udzielam Akademii G{\'o}rniczo-Hutniczej im. S. Staszica w Krakowie nieograniczonej w czasie nieodp{\l{}}atnej licencji niewy{\l{}}{\k{a}}cznej do korzystania z przedstawionej dokumentacji \@thesistypePL iej pracy dyplomowej, w zakresie publicznego udost{\k{e}}pniania i rozpowszechniania w wersji drukowanej i elektronicznej\footnotemark.
+
+                Publikacja ta mo\.ze nast{\k{a}}pi\'c po ewentualnym zg{\l{}}oszeniu do ochrony prawnej wynalazk\'ow, wzor\'ow u\.zytkowych, wzor\'ow przemys{\l{}}owych b{\k{e}}d{\k{a}}cych wynikiem pracy in\.zynierskiej\footnotemark.
         }
         \vspace*{10pt}
         
@@ -356,8 +358,7 @@
         \begin{center}
                 \MakeUppercase{Streszczenie} 
         \end{center}
-        \onehalfspacing
-        \@summaryPL     
+        {\onehalfspacing\@summaryPL}
 
         %--------------------------SUMMARY--------------------------
 
@@ -386,12 +387,11 @@
         \begin{center}
                 \MakeUppercase{Summary} 
         \end{center}
-        \onehalfspacing
-        \@summaryEN     
+        {\onehalfspacing\@summaryEN}
 
         %--------------------------PODZIĘKOWANIA--------------------------
 
-        \clearpage \titlepage
+        \clearpage \titlepage \onehalfspacing
 
         \vspace*{15cm} \vfill
         \begin{flushright} 
