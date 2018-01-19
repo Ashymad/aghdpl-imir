@@ -162,61 +162,64 @@ backend=biber
 %---------------------------------------------------------------------------
 
 \author{{[}Imię i Nazwisko]}
-\sex{m} % Mężczyzna - m; kobieta - cokolwiek
-\shortauthor{{[}Im. i nazwisko]}
-\albumnum{{[}xxxxxx]}
-\address{{[}Adres]}
 
-\titlePL{{[}Bardzo długi temat niezwykle dogłębnej pracy dyplomowej inżynierskiej debatującej nad ekstraordynaryjnie pasjonującym zagadnieniem]}
-\titleEN{{[}Very long title of extremely indepth engineer dimploma thesis exploring an extraordinarily interesing subject]}
+\makeatletter% Poniższe makra są wyłącznie zdefiniowane w klasie aghdpl-imir
+\@ifclassloaded{aghdpl}{
 
-\shorttitlePL{{[}Skrócony temat pracy]} % skrócona wersja tytułu jeśli jest bardzo długi
-\shorttitleEN{{[}Short thesis subject]}
+  \sex{m} % Mężczyzna - m; kobieta - cokolwiek
+  \shortauthor{{[}Im. i nazwisko]}
+  \albumnum{{[}xxxxxx]}
+  \address{{[}Adres]}
 
-% rodzaj pracy bez końcówki fleksyjnej np. inżyniersk, magistersk
-\thesistypePL{inżyniersk}
-\thesistypeEN{engineer}
+  \titlePL{{[}Bardzo długi temat niezwykle dogłębnej pracy dyplomowej inżynierskiej debatującej nad ekstraordynaryjnie pasjonującym zagadnieniem]}
+  \titleEN{{[}Very long title of extremely indepth engineer dimploma thesis exploring an extraordinarily interesing subject]}
 
-\supervisor{{[}Tytuł, imię i nazwisko promotora]}
-%\supervisor{prof. zw. dr hab. inż. Bartłomiej Borkowski}
+  \shorttitlePL{{[}Skrócony temat pracy]} % skrócona wersja tytułu
+  \shorttitleEN{{[}Short thesis subject]}
 
-\reviewer{{[}Tytuł, imię i nazwisko recenzenta]}
+  % rodzaj pracy bez końcówki fleksyjnej np. inżyniersk, magistersk
+  \thesistypePL{inżyniersk}
+  \thesistypeEN{engineer}
 
-\degreeprogrammePL{{[}Nazwa kierunku studiów]}
-\degreeprogrammeEN{{[}Field of Study]}
+  \supervisor{{[}Tytuł, imię i nazwisko promotora]}
 
-\specialisationPL{{[}Nazwa specjalności]}
-\specialisationEN{{[}Specialisation]}
+  \reviewer{{[}Tytuł, imię i nazwisko recenzenta]}
 
-\graduationyear{{[}Rok ukończenia]}
-\date{\today}
-\years{2017/2018}
-\yearofstudy{IV}
+  \degreeprogrammePL{{[}Nazwa kierunku studiów]}
+  \degreeprogrammeEN{{[}Field of Study]}
 
-\department{Katedra Transportu Linowego}
-%\department{Department of Applied Computer Science}
+  \specialisationPL{{[}Nazwa specjalności]}
+  \specialisationEN{{[}Specialisation]}
 
-\facultyPL{Wydział Inżynierii Mechanicznej i Robotyki}
-\facultyEN{Faculty of Mechanical Engineering and Robotics}
+  \graduationyear{{[}Rok ukończenia]}
+  \years{2017/2018}
+  \yearofstudy{IV}
 
-\thesisplan{ % Przykłądowy plan pracy, należy omówić z promotorem
-  \begin{enumerate}
-    \itemsep-1mm 
+  \department{Katedra Transportu Linowego}
+
+  \facultyPL{Wydział Inżynierii Mechanicznej i Robotyki}
+  \facultyEN{Faculty of Mechanical Engineering and Robotics}
+
+  \thesisplan{ % Przykłądowy plan pracy, należy omówić z promotorem
+    \begin{enumerate}
     \item Omówienie tematu pracy i sposobu realizacji z promotorem.
     \item Zebranie i opracowanie literatury dotyczącej tematu pracy.
     \item Zebranie i opracowanie wyników badań.
     \item Analiza wyników badań, ich omówienie i zatwierdzenie przez promotora.
     \item Opracowanie redakcyjne.
-  \end{enumerate}
-}
+    \end{enumerate}
+  }
 
-\summaryPL{{[}Treść streszczenia]}
-\summaryEN{{[}Summary text]}
+  \summaryPL{{[}Treść streszczenia]}
+  \summaryEN{{[}Summary text]}
 
-\acknowledgements{Serdecznie dziękuję \dots tu ciąg dalszych podziękowań np. dla promotora, żony, sąsiada itp.}
+  \acknowledgements{Serdecznie dziękuję \dots tu ciąg dalszych podziękowań np. dla promotora, żony, sąsiada itp.}
 
+  \setlength{\cftsecnumwidth}{10mm}
+}{}%
+\makeatother%
 
-\setlength{\cftsecnumwidth}{10mm}
+\date{\today}
 
 %---------------------------------------------------------------------------
 \setcounter{secnumdepth}{4}
