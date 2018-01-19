@@ -247,7 +247,7 @@ backend=biber
 }
 
 \setcounter{tocdepth}{2}
-\tableofcontents
+{\singlespacing\tableofcontents}
 \clearpage
 
 \include{rozdzial3}
@@ -263,6 +263,9 @@ backend=biber
 % \include{dodatekB}
 % itd.
 
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliografia}
 \printbibliography
 
 \end{document}
