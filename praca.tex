@@ -113,8 +113,29 @@ backend=biber
            {Ł}{{\L{}}}1
            {Ś}{{\'S}}1
            {Ź}{{\'Z}}1
-           {Ż}{{\.Z}}1,
-        basicstyle=\footnotesize\ttfamily,
+           {Ż}{{\.Z}}1
+}
+
+% Ustawienia pakietu lstlisting do umieszczania kodu
+
+\usepackage{color}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},     % choose the background color
+  basicstyle=\ttfamily\footnotesize, % size of fonts used for the code
+  breaklines, breakatwhitespace,     % automatic line breaking only at whitespace
+  commentstyle=\color{mygreen},      % comment style
+  numbers=left,
+  showstringspaces=false,
+  numberstyle=\tiny,
+  frame=l,
+  escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+  keywordstyle=\color{blue},         % keyword style
+  stringstyle=\color{mymauve}        % string literal style
 }
 
 % ------------------------
