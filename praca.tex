@@ -10,6 +10,12 @@
 
 \usepackage[utf8]{inputenc}
 
+% Załączniki
+
+\usepackage[toc, page]{appendix}
+\renewcommand\appendixpagename{Załączniki}
+\renewcommand\appendixtocname{Załączniki}
+
 % dodatkowe pakiety
 
 \usepackage{mathtools}
@@ -255,17 +261,20 @@ backend=biber
 \include{rozdzial2}
 \include{tests}
 
-
-
-% itd.
-% \appendix
-% \include{dodatekA}
-% \include{dodatekB}
-% itd.
-
+%Kod poniżej dodaje Bibliografię do spisu treści
 \cleardoublepage
 \phantomsection
 \addcontentsline{toc}{chapter}{Bibliografia}
 \printbibliography
+
+% Załączniki
+\begin{appendices}
+  \makeatletter% Kod poniżej powoduje ustęp w spisie treści
+  \addtocontents{toc}{\let\protect\l@chapter\protect\l@section}
+  \input{zalocznikA}
+  % \input{zalocznikB}
+  % itd.
+  \makeatother%
+\end{appendices}
 
 \end{document}
