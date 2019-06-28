@@ -87,6 +87,17 @@ backend=biber
 
 \addbibresource{bibliografia.bib}
 
+% Przecinki zamiast kropek do oddzielenia pól wpisu bibliograficznego
+% i dwukropek po nazwisku autora, bez kropki na końcu
+\AtBeginBibliography{
+    \renewcommand\labelnamepunct{:\space}
+    \renewcommand\newunitpunct{\addcomma\space}
+    \renewcommand{\finentrypunct}{}
+    
+    \renewcommand{\bibopenparen}{\addcomma\addspace}
+    \renewcommand{\bibcloseparen}{\addspace}
+}
+
 % Nie wyświetlaj wybranych pól.
 %\AtEveryBibitem{\clearfield{note}}
 
