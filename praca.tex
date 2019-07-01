@@ -42,17 +42,17 @@
 \usepackage{placeins}
 
 \ifcsname{chapter}\endcsname%
-    \let\Oldchapter\chapter{}
+    \let\Oldchapter\chapter%
     \renewcommand{\chapter}{\FloatBarrier\Oldchapter}
 \fi
 
-\let\Oldsection\section{}
+\let\Oldsection\section%
 \renewcommand{\section}{\FloatBarrier\Oldsection}
 
-\let\Oldsubsection\subsection{}
+\let\Oldsubsection\subsection%
 \renewcommand{\subsection}{\FloatBarrier\Oldsubsection}
 
-\let\Oldsubsubsection\subsubsection{}
+\let\Oldsubsubsection\subsubsection%
 \renewcommand{\subsubsection}{\FloatBarrier\Oldsubsubsection}
 
 % --- < bibliografia > ---
@@ -101,7 +101,7 @@ backend=biber
 \usepackage{listings}
 \lstset{language=TeX}
 
-\lstset{
+\lstset{%
         literate={ą}{{\k{a}}}1
            {ć}{{\'c}}1
            {ę}{{\k{e}}}1
@@ -146,7 +146,7 @@ backend=biber
 
 % ------------------------
 
-\AtBeginDocument{
+\AtBeginDocument{%
         \renewcommand{\tablename}{Tab.}
         \renewcommand{\figurename}{Rys.}
 }
@@ -170,7 +170,7 @@ backend=biber
 \author{{[Imię i Nazwisko]}}
 
 \makeatletter% Poniższe makra są wyłącznie zdefiniowane w klasie aghdpl-imir
-\@ifclassloaded{aghdpl}{
+\@ifclassloaded{aghdpl}{%
 
   \sex{m} % Mężczyzna - m; kobieta - cokolwiek
   \shortauthor{{[Im. \ i nazwisko]}}
@@ -206,7 +206,7 @@ backend=biber
   \facultyPL{Wydział Inżynierii Mechanicznej i Robotyki}
   \facultyEN{Faculty of Mechanical Engineering and Robotics}
 
-  \thesisplan{ % Przykłądowy plan pracy, należy omówić z promotorem
+  \thesisplan{% Przykłądowy plan pracy, należy omówić z promotorem
     \begin{enumerate}
     \item Omówienie tematu pracy i sposobu realizacji z promotorem.
     \item Zebranie i opracowanie literatury dotyczącej tematu pracy.
@@ -244,7 +244,7 @@ backend=biber
 
 % Ponowne zdefiniowanie stylu `plain`, aby usunąć numer strony z pierwszej strony spisu treści i poszczególnych rozdziałów.
 \fancypagestyle{plain}
-{
+{%
         % Usuń nagłówek i stopkę
         \fancyhf{}
         % Usuń linie.
