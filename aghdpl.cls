@@ -325,24 +325,31 @@
     \begin{flushright}
         Krak\'{o}w, \@date
     \end{flushright}
+    \vspace*{-55pt}
 
-    \begin{flushleft}
-        Akademia G{\'o}rniczo-Hutnicza im. Stanis{\l{}}awa Staszica \\
-        {\bfseries\@facultyPL}
+    \begin{flushleft}\singlespacing
+      Akademia G{\'o}rniczo-Hutnicza im. Stanis{\l{}}awa Staszica \\
+      {\bfseries\@facultyPL}
+      \vspace*{0.2cm}
 
-        {\onehalfspacing Kierunek: \@degreeprogrammePL \\
-            Profil dyplomowania: \@specialisationPL}
-        \vspace*{12pt}
-
-        \@author \\
-        {\bfseries Praca dyplomowa \@thesistypePL a} \\
-        \@titlePL \\
-        Opiekun: \@supervisor \\
+      Kierunek studiów: \@degreeprogrammePL
+      \\\vspace*{0.2cm}
+      Specjalność: \@specialisationPL
+      \\\vspace*{0.2cm}
+      \@author \\
+      \textit{Imiona i nazwisko studenta}
+      \\\vspace*{0.2cm}
+      {\bfseries Praca dyplomowa \@thesistypePL a} \\
+      \@titlePL
+      \vspace*{-0.3cm}
+      \begin{center} \textit{(tytuł pracy)}\end{center}
+      \\\vspace*{0.2cm}
+      Opiekun: \@supervisor \\
     \end{flushleft}
-    \vspace*{24pt}
+    \vspace*{0.0cm}
 
     \begin{center}
-        \MakeUppercase{Streszczenie}
+      \textbf{\MakeUppercase{Streszczenie}}
     \end{center}
     \onehalfspacing
     \@summaryPL
