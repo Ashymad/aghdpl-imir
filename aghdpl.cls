@@ -374,7 +374,7 @@
       Specialization: \@specialisationPL
       \\\vspace*{0.2cm}
       \@author \\
-      \textit{(First name and family names of the student)}
+      \textit{(First name and family name of the student)}
       \\\vspace*{0.2cm}
       {\bfseries \emakefirstuc{\@thesistypeEN} Diploma Thesis}\\
       \@titleEN
