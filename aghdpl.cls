@@ -343,7 +343,7 @@
       \@titlePL
       \vspace*{-0.3cm}
       \begin{center} \textit{(tytuł pracy)}\end{center}
-      \\\vspace*{0.2cm}
+      \vspace*{0.2cm}
       Opiekun: \@supervisor \\
     \end{flushleft}
     \vspace*{0.0cm}
@@ -360,26 +360,33 @@
     \thispagestyle{empty}
 
     \begin{flushright}
-        Cracow, {\selectlanguage{english}\@date}
+      Krak\'{o}w, {\selectlanguage{english}\@date}
     \end{flushright}
+    \vspace*{-55pt}
 
-    \begin{flushleft}
-        AGH University of Science and Technology \\
-        {\bfseries\@facultyEN}
+    \begin{flushleft}\singlespacing
+      AGH University of Science and Technology \\
+      {\bfseries\@facultyEN}
+      \vspace*{0.2cm}
 
-        {\onehalfspacing Field of Study: \@degreeprogrammeEN \\
-            Specialisations: \@specialisationEN}
-        \vspace*{12pt}
-
-        \@author \\
-        {\bfseries \xmakefirstuc\@thesistypeEN~Diploma Thesis} \\
-        \@titleEN \\
-        Supervisor: \@supervisor \\
+      Field of Study: \@degreeprogrammePL
+      \\\vspace*{0.2cm}
+      Specialization: \@specialisationPL
+      \\\vspace*{0.2cm}
+      \@author \\
+      \textit{(First name and family names of the student)}
+      \\\vspace*{0.2cm}
+      {\bfseries \emakefirstuc{\@thesistypeEN} Diploma Thesis}\\
+      \@titleEN
+      \vspace*{-0.3cm}
+      \begin{center} \textit{(Thesis title)}\end{center}
+      \vspace*{0.2cm}
+      Supervisor: \@supervisor \\
     \end{flushleft}
-    \vspace*{24pt}
+    \vspace*{0.0cm}
 
     \begin{center}
-        \MakeUppercase{Summary}
+      \textbf{\MakeUppercase{Summary}}
     \end{center}
     \onehalfspacing
     \@summaryEN
