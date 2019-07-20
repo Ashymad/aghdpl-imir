@@ -42,17 +42,17 @@
 \usepackage{placeins}
 
 \ifcsname{chapter}\endcsname%
-    \let\Oldchapter\chapter
+    \let\Oldchapter\chapter%
     \renewcommand{\chapter}{\FloatBarrier\Oldchapter}
 \fi
 
-\let\Oldsection\section
+\let\Oldsection\section%
 \renewcommand{\section}{\FloatBarrier\Oldsection}
 
-\let\Oldsubsection\subsection
+\let\Oldsubsection\subsection%
 \renewcommand{\subsection}{\FloatBarrier\Oldsubsection}
 
-\let\Oldsubsubsection\subsubsection
+\let\Oldsubsubsection\subsubsection%
 \renewcommand{\subsubsection}{\FloatBarrier\Oldsubsubsection}
 
 % --- < bibliografia > ---
@@ -112,7 +112,7 @@ backend=biber
 \usepackage{listings}
 \lstset{language=TeX}
 
-\lstset{
+\lstset{%
         literate={ą}{{\k{a}}}1
            {ć}{{\'c}}1
            {ę}{{\k{e}}}1
@@ -141,7 +141,7 @@ backend=biber
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
 
-\lstset{ %
+\lstset{%
   backgroundcolor=\color{white},     % choose the background color
   basicstyle=\ttfamily\footnotesize, % size of fonts used for the code
   breaklines, breakatwhitespace,     % automatic line breaking only at whitespace
@@ -150,14 +150,14 @@ backend=biber
   showstringspaces=false,
   numberstyle=\tiny,
   frame=l,
-  escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+  escapeinside={*@}{@*},           % if you want to add LaTeX within your code
   keywordstyle=\color{blue},         % keyword style
   stringstyle=\color{mymauve}        % string literal style
 }
 
 % ------------------------
 
-\AtBeginDocument{
+\AtBeginDocument{%
         \renewcommand{\tablename}{Tab.}
         \renewcommand{\figurename}{Rys.}
 }
@@ -181,34 +181,34 @@ backend=biber
 \author{{[}Imiona i Nazwisko]}
 
 \makeatletter% Poniższe makra są wyłącznie zdefiniowane w klasie aghdpl-imir
-\@ifclassloaded{aghdpl}{
+\@ifclassloaded{aghdpl}{%
 
   \sex{m} % Mężczyzna - m; kobieta - cokolwiek
-  \shortauthor{{[}Im. i nazwisko]}
-  \albumnum{{[}xxxxxx]}
-  \address{{[}Adres]}
+  \shortauthor{{[Im.\ i nazwisko]}}
+  \albumnum{{[xxxxxx]}}
+  \address{{[Adres]}}
 
-  \titlePL{{[}Bardzo długi temat niezwykle dogłębnej pracy dyplomowej inżynierskiej debatującej nad ekstraordynaryjnie pasjonującym zagadnieniem]}
-  \titleEN{{[}Very long title of extremely indepth engineer dimploma thesis exploring an extraordinarily interesing subject]}
+  \titlePL{{[Bardzo długi temat niezwykle dogłębnej pracy dyplomowej inżynierskiej debatującej nad ekstraordynaryjnie pasjonującym zagadnieniem]}}
+  \titleEN{{[Very long title of extremely indepth engineer dimploma thesis exploring an extraordinarily interesing subject]}}
 
-  \shorttitlePL{{[}Skrócony temat pracy]} % skrócona wersja tytułu
-  \shorttitleEN{{[}Short thesis subject]}
+  \shorttitlePL{{[Skrócony temat pracy]}} % skrócona wersja tytułu
+  \shorttitleEN{{[Short thesis subject]}}
 
   % rodzaj pracy bez końcówki fleksyjnej np. inżyniersk, magistersk
   \thesistypePL{magistersk}
   \thesistypeEN{engineer}
 
-  \supervisor{{[}Tytuł, imię i nazwisko promotora]}
+  \supervisor{{[Tytuł, imię i nazwisko promotora]}}
 
-  \reviewer{{[}Tytuł, imię i nazwisko recenzenta]}
+  \reviewer{{[Tytuł, imię i nazwisko recenzenta]}}
 
-  \degreeprogrammePL{{[}Nazwa kierunku studiów]}
-  \degreeprogrammeEN{{[}Field of Study]}
+  \degreeprogrammePL{{[Nazwa kierunku studiów]}}
+  \degreeprogrammeEN{{[Field of Study]}}
 
-  \specialisationPL{{[}Nazwa specjalności]}
-  \specialisationEN{{[}Specialisation]}
+  \specialisationPL{{[Nazwa specjalności]}}
+  \specialisationEN{{[Specialisation]}}
 
-  \graduationyear{{[}Rok ukończenia]}
+  \graduationyear{{[Rok ukończenia]}}
   \years{2017/2018}
   \yearofstudy{IV}
   \formPL{stacjonarne}
@@ -226,7 +226,7 @@ backend=biber
   \facultyPL{Wydział Inżynierii Mechanicznej i Robotyki}
   \facultyEN{Faculty of Mechanical Engineering and Robotics}
 
-  \thesisplan{ % Przykłądowy plan pracy, należy omówić z promotorem
+  \thesisplan{% Przykładowy plan pracy, należy omówić z promotorem
     \begin{enumerate}
     \item Omówienie tematu pracy i sposobu realizacji z promotorem.
     \item Zebranie i opracowanie literatury dotyczącej tematu pracy.
@@ -237,14 +237,14 @@ backend=biber
   }
 
   \summaryPL{\indent\indent%
-    {[}Treść streszczenia]
+	  {[Treść streszczenia]}
   }
   \summaryEN{\indent\indent%
-    {[}Summary text]
+	  {[Summary text]}
   }
 
   \acknowledgements{%
-    Serdecznie dziękuję \dots tu ciąg dalszych podziękowań np. dla promotora,
+    Serdecznie dziękuję \dots tu ciąg dalszych podziękowań np.\ dla promotora,
     żony, sąsiada itp.
   }
 
@@ -260,11 +260,11 @@ backend=biber
 
 \begin{document}
 
-\titlepages
+\titlepages{}
 
 % Ponowne zdefiniowanie stylu `plain`, aby usunąć numer strony z pierwszej strony spisu treści i poszczególnych rozdziałów.
 \fancypagestyle{plain}
-{
+{%
         % Usuń nagłówek i stopkę
         \fancyhf{}
         % Usuń linie.
@@ -282,10 +282,10 @@ backend=biber
 \include{tests}
 
 %Kod poniżej dodaje Bibliografię do spisu treści
-\cleardoublepage
-\phantomsection
+\cleardoublepage{}
+\phantomsection{}
 \addcontentsline{toc}{chapter}{Bibliografia}
-\printbibliography
+\printbibliography{}
 
 % Załączniki
 \begin{appendices}

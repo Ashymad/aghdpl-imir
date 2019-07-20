@@ -10,7 +10,7 @@ Pakiet \texttt{siunitx} zadba o to, by liczba została poprawnie sformatowana: \
 
 \section{Rysunek}
 
-Pakiet \texttt{subcaption} pozwala na umieszczanie w podpisie rysunku odnośników do ,,podilustracji'': \\
+Pakiet \texttt{subcaption} pozwala na umieszczanie w podpisie rysunku odnośników do ,,podilustracji'':\\ % chktex 26
 
 \begin{figure}[h]
         \centering
@@ -23,9 +23,8 @@ Pakiet \texttt{subcaption} pozwala na umieszczanie w podpisie rysunku odnośnik�
                 \centering
                 \framebox[2.0\width]{B}
                 \subcaption{\label{subfigure_b}}
-        \end{subfigure}
-        \label{fig:subcaption_example}
-        \caption{Przykład użycia \texttt{\textbackslash subcaption}: \protect\subref{subfigure_a} litera A, \protect\subref{subfigure_b} litera B.}
+        \end{subfigure}\label{fig:subcaption_example}
+	\caption{Przykład użycia \texttt{\textbackslash{} subcaption}: \protect\subref{subfigure_a} litera A, \protect\subref{subfigure_b} litera B.}
 \end{figure}
 
 \section{Tabela}
@@ -36,8 +35,7 @@ Pakiet \texttt{threeparttable} umożliwia dodanie do tabeli adnotacji: \\
         \centering
         
         \begin{threeparttable}
-                \caption{Przykład tabeli}
-                \label{tab:table_example}
+                \caption{Przykład tabeli}\label{tab:table_example}
                 
                 \begin{tabularx}{0.6\textwidth}{C{1}}
                         \toprule
@@ -50,7 +48,7 @@ Pakiet \texttt{threeparttable} umożliwia dodanie do tabeli adnotacji: \\
                 
                 \begin{tablenotes}
                         \footnotesize
-                        \item[a] Jakiś komentarz\textellipsis
+			\item[a] Jakiś komentarz\textellipsis{}
                 \end{tablenotes}
                 
         \end{threeparttable}
