@@ -109,57 +109,50 @@
 	\titlepage
 
 	\begin{center}
-		\vspace*{1cm}
+        \singlespacing
 
-		\begin{tabular}{m{20mm} m{110mm}}
+		\includegraphics[scale=0.4]{agh}
 
-		\includegraphics[scale=0.3]{agh}
-		& \singlespacing\Large\bfseries\begin{minipage}[c]{0.7\columnwidth}\centering%
-			\MakeUppercase{Akademia G\'{o}rniczo-Hutnicza}\\\vspace{3mm}
-			im. Stanis\l{}awa Staszica w Krakowie\\\vspace{3mm}
-			\MakeUppercase{\@facultyPL}
-		\end{minipage}\vspace{3mm}\\\hline
-		\end{tabular}
+		\vspace*{0.4cm}
 
-		\vspace*{36pt}
+        \fontsize{16}{20}{\textbf{\MakeUppercase{Akademia Górniczo-Hutnicza}}}\\
+        \fontsize{14}{16}{\textbf{\MakeUppercase{Im. Stanisława Staszica w Krakowie}}}
 
-		{\fontsize{28}{30}\textbf{\emakefirstuc{\@thesistypePL a} praca dyplomowa}}
-		\vspace*{2mm}
+        \vspace*{0.4cm}
 
-		\vspace*{42pt}
+        \fontsize{14}{16}{\textbf{\MakeUppercase{\@facultyPL}}}
 
-		{\fontsize{22}{24}\textbf{\@author}}
-		\vspace*{1mm}
+		\vspace*{2cm}
 
-		{\fontsize{14}{16}\textit{Imi\k{e} i nazwisko}}
-		\vspace*{5mm}
+        \fontsize{20}{22}{\textbf{\MakeUppercase{praca dyplomowa}}}
 
-		{\fontsize{14}{16}\textbf{\@degreeprogrammePL}}
-		\vspace*{1mm}
+		\vspace*{0.3cm}
 
-		{\fontsize{14}{16}\textit{Kierunek studi\'{o}w}}
-		\vspace*{10mm}
+        \fontsize{20}{22}{\textbf{\@thesistypePL a}}
 
-                \thesistitles
-		\vspace*{1mm}
+		\vspace*{0.8cm}
 
-		{\fontsize{14}{16}\textit{Temat pracy dyplomowej}}
+        \fontsize{18}{20}{\textbf{\MakeUppercase{\@titlePL}}}
+
+		\vspace*{0.8cm}
+
+        \fontsize{14}{16}{\textbf{\MakeUppercase{\@titleEN}}}
 
 		\vspace{\fill}
 
-		\fontsize{14}{16}
-		\begin{tabular}{c m{30mm} c}
-
-			\textbf{\@supervisor} &  & \dots\dots\dots\dots \\
-
-			\textit{Promotor Pracy} &  & \textit{Ocena} \\
-		\end{tabular}
-	\end{center}
+        \fontsize{14}{16}{\begin{tabular}{l m{7cm} c}
+            \textit{Autor:} & \fontsize{16}{18}{\textbf{\@author}} &\\
+            \textit{Kierunek studiów:} & \@degreeprogrammePL &\\
+            \textit{Opiekun pracy:} & \textbf{\@supervisor} &
+            \makecell{\vspace{\fill}\\\dots\dots\dots\dots} \\
+                                    & & \fontsize{11}{12}{\textit{podpis}}\\
+        \end{tabular}}
+      \end{center}
 	\noindent
 
 	\vspace*{28pt}
 
-	\centerline{\rmfamily\fontsize{14}{16}\selectfont Krak\'{o}w, rok \@years}
+	\centerline{\rmfamily\fontsize{14}{16}\selectfont Krak\'{o}w, rok \the\year}
 
 	%--------------------------OŚWIADCZENIE O ODPOWIEDZIALNOŚCI KARNEJ,
 	%SAMODZIELNYM WYKONANIU, JAWNOŚCI I ZGODZIE NA PUBLIKACJĘ W
