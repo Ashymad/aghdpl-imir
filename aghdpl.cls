@@ -74,6 +74,7 @@
 \def\sex#1                {\gdef\@sex{#1}}
 \def\thesisplan#1         {\gdef\@thesisplan{#1}}
 \def\agree#1              {\gdef\@agree{#1}}
+\def\apprenticeship#1     {\gdef\@apprenticeship{#1}}
 
 \newcommand{\ea}{\expandafter\ifstrequal\expandafter{\@sex}{m}{e}{a}}
 
@@ -395,61 +396,58 @@
 
 	%--------------------------PLAN PRACY--------------------------
 	\clearpage
-	\thispagestyle{empty}
+    \thispagestyle{empty}
 
-        \singlespacing
+    \singlespacing
 
-	\begin{flushright}
-		Krak\'{o}w, \@date
-	\end{flushright}
+    \begin{flushright}
+      Krak\'{o}w, dnia \@date
+    \end{flushright}
 
-        \vspace*{2mm}
-		\begin{center}
+    \begin{flushleft}
+      {\bfseries\MakeUppercase{Akademia G\'{o}rniczo-Hutnicza}}\\
+      \indent{\bfseries\MakeUppercase{\@facultyPL}}
+    \end{flushleft}
+    \begin{center}
 
-          {\bfseries\MakeUppercase{Akademia G\'{o}rniczo-Hutnicza}}\\
-          \indent{\bfseries\MakeUppercase{\@facultyPL}}
+      \vspace*{6mm}
 
-          \vspace*{8mm}
+      {\bfseries TEMATYKA PRACY DYPLOMOWEJ} \\
+      \vspace{5mm}
 
-          {\bfseries TEMATYKA PRACY I PRAKTYKI DYPLOMOWEJ \MakeUppercase{\@thesistypePL}IEJ} \\
-          dla studenta \@yearofstudy~roku studi\'ow stacjonarnych
-          \vspace{5mm}
+      {\bfseries\@author} \\
+      {\itshape imi\k{e} i nazwisko studenta}\\
+      \vspace*{5mm}
+    \end{center}
 
-          {\bfseries\@author} \\
-          {\itshape imi\k{e} i nazwisko studenta}\\
-          \vspace*{5mm}
-        \end{center}
+    \onehalfspacing
+    \noindent \textbf{Tytuł pracy dyplomowej:} \\ \@titlePL \\
 
-        \onehalfspacing
-        \noindent TEMAT PRACY DYPLOMOWEJ \MakeUppercase{\@thesistypePL iej}: \@titlePL \\
-        \vspace{10mm}
+    \noindent\begin{tabular}{p{35mm} p{75mm} c}
+      Promotor pracy:  & \@supervisor & \\
+      Recenzent pracy: & \@reviewer   & \\
+                       &              & \\
+                       &              & \dots\dots\dots\dots\dots \\
+                       &              & \textit{Podpis dziekana} \\
+    \end{tabular}
 
-        \noindent\begin{tabular}{p{35mm} p{75mm} c}
-          {\itshape Promotor pracy:}  & \@supervisor & \\
-                                      &              & \dots\dots\dots\dots\dots \\
-          {\itshape Recenzent pracy:} & \@reviewer   & {\itshape podpis dziekana}\\
-        \end{tabular}
-
-        \vspace*{10mm}
-        \singlespacing
-        \noindent PROGRAM PRACY I PRAKTYKI DYPLOMOWEJ:
-        \@thesisplan
-        \vspace*{5mm}
-        \begin{flushright}
-          \begin{tabular}{l c c}
-            Krak\'ow, & \dots\dots\dots & \dots\dots\dots\dots\dots\dots \\
-                      & {\itshape data}      & {\itshape podpis dyplomanta} \\
-          \end{tabular}
-        \end{flushright}
-        \vspace*{8mm}
-        \centerline{{\bfseries TERMIN ODDANIA DO DZIEKANATU:}\hspace{20mm}\dots\dots\dots\dots {\bfseries 20}\dots {\bfseries r.}}
-        \vspace*{5mm}
-        \begin{flushright}
-          \begin{tabular}{c}
-            \dots\dots\dots\dots\dots\dots\dots \\
-            {\itshape podpis promotora} \\
-          \end{tabular}
-        \end{flushright}
+    \vspace*{10mm}
+    \singlespacing
+    \noindent PLAN PRACY DYPLOMOWEJ:\\
+    \@thesisplan
+    \vspace{0.6cm}
+    Praktyka (dyplomowa): \vspace*{0.1cm}\\ \@apprenticeship \\
+    \begin{flushright}
+      \begin{tabular}{l c c}
+        Krak\'ow, & \dots\dots\dots & \dots\dots\dots\dots\dots\dots \\
+                  & {\itshape data} & {\itshape podpis dyplomanta} \\
+                  &                 & \\
+                  &                 & \dots\dots\dots\dots\dots\dots \\
+                  &                 & {\itshape podpis promotora} \\
+      \end{tabular}
+    \end{flushright}
+    \vspace{0.6cm}
+    \centerline{{Termin oddania do dziekanatu:}\hspace{30mm}\dots\dots\dots\dots 20\dots r.}
 
 
 	%--------------------------PODZIĘKOWANIA--------------------------
