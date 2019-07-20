@@ -132,15 +132,15 @@
 
 		\vspace*{0.8cm}
 
-        \fontsize{18}{20}{\textbf{\MakeUppercase{\@titlePL}}}
+        \fontsize{18}{20}{\textbf{\@titlePL}}
 
 		\vspace*{0.8cm}
 
-        \fontsize{14}{16}{\textbf{\MakeUppercase{\@titleEN}}}
+        \fontsize{14}{16}{\textbf{\@titleEN}}
 
 		\vspace{\fill}
 
-        \fontsize{14}{16}{\begin{tabular}{l m{7cm} c}
+        \fontsize{14}{16}{\begin{tabular}{l m{8cm} c}
             \textit{Autor:} & \fontsize{16}{18}{\textbf{\@author}} &\\
             \textit{Kierunek studiów:} & \@degreeprogrammePL &\\
             \textit{Opiekun pracy:} & \textbf{\@supervisor} &
@@ -219,7 +219,7 @@
           w~uczelni oraz za czyn uchybiaj\k{a}cy godno\'{s}ci studenta.''
           \textbf{niniejsz{\k{a}} prac{\k{e}} dyplomow{\k{a}} wykona{\l{}}\ea m
             osobi{\'s}cie i~samodzielnie i~nie korzysta{\l{}}\ea m ze
-          {\'z}r{\'o}de{\l{}} innych ni{\.z} wymienione w pracy'';}
+          {\'z}r{\'o}de{\l{}} innych ni{\.z} wymienione w pracy;}
 
         \item praca dyplomowa jest wynikiem mojej tw\'{o}rczo\'{s}ci i~nie
           narusza praw autorskich innych os\'{o}b;
