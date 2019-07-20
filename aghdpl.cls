@@ -1,24 +1,25 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
+%
 % File:     aghdpl.cls           (LaTeX Document class option "aghdpl")
-%          
+%
 % Authors: Marcin Szpyrka     (mszpyrka@agh.edu.pl)
 %          Grzegorz J. Nalepa (gjn@agh.edu.pl)
 %          Paweł Kłeczek      (p.l.kleczek@gmail.com)
 %          Szymon Mikulicz    (czilukim@o2.pl)
 %          Marcel Piszak      (marcel.piszak@wp.pl)
+%          Teresa Makuch      (tesiamakuch@gmail.com)
 %          AGH University of Science and Technology, Kraków, POLAND
-% 
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\message{*** [aghdpl.cls] ---  (MSz, GJN, PK)  v3.1.0 <16.02.2016>  ***}       
+\message{*** [aghdpl.cls] ---  (MSz, GJN, PK)  v3.1.0 <16.02.2016>  ***}
 
 \newif\ifpdflatex\pdflatexfalse
-\NeedsTeXFormat{LaTeX2e} % 
-\ProvidesClass{aghdpl} 
+\NeedsTeXFormat{LaTeX2e} %
+\ProvidesClass{aghdpl}
 \DeclareOption{pdflatex}{\pdflatextrue}
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}} 
-\ProcessOptions\LoadClass[a4paper,oneside,openright]{report} 
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
+\ProcessOptions\LoadClass[a4paper,oneside,openright]{report}
 
 \RequirePackage{newtxtext}
 \RequirePackage{anyfontsize}
@@ -53,6 +54,8 @@
 \def\facultyEN#1          {\gdef\@facultyEN{#1}}
 \def\thesistypePL#1       {\gdef\@thesistypePL{#1}}
 \def\thesistypeEN#1       {\gdef\@thesistypeEN{#1}}
+\def\formPL#1			  {\gdef\@formPL{#1}}
+\def\formEN#1			  {\gdef\@formEN{#1}}
 \def\supervisor#1         {\gdef\@supervisor{#1}}
 \def\reviewer#1           {\gdef\@reviewer{#1}}
 \def\acknowledgements#1   {\gdef\@acknowledgements{#1}}
@@ -70,226 +73,334 @@
 \def\summaryEN#1          {\gdef\@summaryEN{#1}}
 \def\sex#1                {\gdef\@sex{#1}}
 \def\thesisplan#1         {\gdef\@thesisplan{#1}}
+\def\agree#1              {\gdef\@agree{#1}}
 
 \newcommand{\ea}{\expandafter\ifstrequal\expandafter{\@sex}{m}{e}{a}}
 
 \newcommand{\ya}{\expandafter\ifstrequal\expandafter{\@sex}{m}{y}{a}}
 
+\newcommand{\yesno}{\expandafter\ifstrequal\expandafter{\@agree}{t}{TAK}{NIE}}
+
 \renewcommand{\labelitemi}{--}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
 %------------------------------------------------------------------------------
 
 \def\thesisheaders{
-        \fancyfoot[LE,RO]{\small \@shortauthor\quad\textit{\@shorttitlePL}}
-        \def\thesistitles{{\LARGE\textbf{\@titlePL}}}
+	\fancyfoot[LE,RO]{\small \@shortauthor\quad\textit{\@shorttitlePL}}
+        \def\thesistitles{{\fontsize{20}{22}\textbf{\@titlePL}}}
 }
 
 
 \DeclareOption{en}{
-        \def\thesisheaders{
-                \fancyfoot[LE,RO]{\small \@shortauthor\quad\textit{\@shorttitleEN}}
-        }
-        \def\thesistitles{{\LARGE\textbf{\@titlePL}}\\\vspace*{2mm}
-                          {\LARGE\textbf{\@titleEN}}}
+	\def\thesisheaders{
+		\fancyfoot[LE,RO]{\small \@shortauthor\quad\textit{\@shorttitleEN}}
+	}
+        \def\thesistitles{{\fontsize{20}{22}\textbf{\@titlePL}}\\\vspace*{2mm}
+                          {\fontsize{20}{22}\textbf{\@titleEN}}}
 }
 
 \ProcessOptions
 
 \newcommand{\titlepages}{%
-        %--------------------------STRONA TYTUŁOWA--------------------------
+	%--------------------------STRONA TYTUŁOWA--------------------------
 
-        \newpage 
-        \titlepage 
+	\newpage
+	\titlepage
 
-        \begin{center}
-                \vspace*{1cm}
+	\begin{center}
+		\vspace*{1cm}
 
-                \begin{tabular}{m{20mm} m{110mm}}
-                
-                \includegraphics[scale=0.3]{agh}
-                & \singlespacing\Large\bfseries\begin{minipage}[c]{0.7\columnwidth}\centering%
-                        \MakeUppercase{Akademia G\'{o}rniczo-Hutnicza}\\\vspace{3mm}
-                        im. Stanis\l{}awa Staszica w Krakowie\\\vspace{3mm}
-                        \MakeUppercase{\@facultyPL}
-                \end{minipage}\vspace{3mm}\\\hline
-                \end{tabular}
+		\begin{tabular}{m{20mm} m{110mm}}
 
-                \vspace*{36pt}
+		\includegraphics[scale=0.3]{agh}
+		& \singlespacing\Large\bfseries\begin{minipage}[c]{0.7\columnwidth}\centering%
+			\MakeUppercase{Akademia G\'{o}rniczo-Hutnicza}\\\vspace{3mm}
+			im. Stanis\l{}awa Staszica w Krakowie\\\vspace{3mm}
+			\MakeUppercase{\@facultyPL}
+		\end{minipage}\vspace{3mm}\\\hline
+		\end{tabular}
 
-                {\fontsize{28}{30}\textbf{Praca dyplomowa}}
-                \vspace*{2mm}
+		\vspace*{36pt}
 
-                {\fontsize{24}{26}\textbf{\@thesistypePL a}}
-                \vspace*{42pt}
+		{\fontsize{28}{30}\textbf{\emakefirstuc{\@thesistypePL a} praca dyplomowa}}
+		\vspace*{2mm}
 
-                {\fontsize{22}{24}\textbf{\@author}}
-                \vspace*{1mm}
+		\vspace*{42pt}
 
-                {\fontsize{14}{16}\textit{Imi\k{e} i nazwisko}}
-                \vspace*{5mm}
+		{\fontsize{22}{24}\textbf{\@author}}
+		\vspace*{1mm}
 
-                {\fontsize{14}{16}\textbf{\@degreeprogrammePL}}
-                \vspace*{1mm}
+		{\fontsize{14}{16}\textit{Imi\k{e} i nazwisko}}
+		\vspace*{5mm}
 
-                {\fontsize{14}{16}\textit{Kierunek studi\'{o}w}}
-                \vspace*{10mm}
+		{\fontsize{14}{16}\textbf{\@degreeprogrammePL}}
+		\vspace*{1mm}
+
+		{\fontsize{14}{16}\textit{Kierunek studi\'{o}w}}
+		\vspace*{10mm}
 
                 \thesistitles
-                \vspace*{1mm}
+		\vspace*{1mm}
 
-                {\fontsize{14}{16}\textit{Temat pracy dyplomowej}}      
+		{\fontsize{14}{16}\textit{Temat pracy dyplomowej}}
 
-                \vspace{\fill}
+		\vspace{\fill}
 
-                \fontsize{14}{16}
-                \begin{tabular}{c m{30mm} c}
+		\fontsize{14}{16}
+		\begin{tabular}{c m{30mm} c}
 
-                        \textbf{\@supervisor} &  & \dots\dots\dots\dots \\ 
-                        
-                        \textit{Promotor Pracy} &  & \textit{Ocena} \\
-                \end{tabular}
-        \end{center}
-        \noindent
+			\textbf{\@supervisor} &  & \dots\dots\dots\dots \\
 
-        \vspace*{28pt}
+			\textit{Promotor Pracy} &  & \textit{Ocena} \\
+		\end{tabular}
+	\end{center}
+	\noindent
 
-        \centerline{\rmfamily\fontsize{14}{16}\selectfont Krak\'{o}w, rok \@years}
+	\vspace*{28pt}
 
-        %--------------------------OŚWIADCZENIE O ODPOWIEDZIALNOŚCI KARNEJ--------------------------
+	\centerline{\rmfamily\fontsize{14}{16}\selectfont Krak\'{o}w, rok \@years}
 
-        \clearpage 
-        \thispagestyle{empty}
+	%--------------------------OŚWIADCZENIE O ODPOWIEDZIALNOŚCI KARNEJ,
+	%SAMODZIELNYM WYKONANIU, JAWNOŚCI I ZGODZIE NA PUBLIKACJĘ W
+	%INTERNECIE--------------------------
 
-        \begin{flushright}
-                Krak\'{o}w, \@date
-        \end{flushright}
+	\clearpage
+	\thispagestyle{empty}
 
-        \noindent
-        \begin{tabular}{m{38mm} l}
-                Imi\k{e} i nazwisko: & \@author \\
-                Nr albumu: & \@albumnum \\
-                Kierunek studi\'{o}w: & \@degreeprogrammePL \\
-                Profil dyplomowania: & \@specialisationPL \\
-        \end{tabular}
-        \vspace*{28pt}
+	\begin{center}
+		\MakeUppercase{\textbf{O{\'s}wiadczenia studenta}}
+	\end{center}
 
-        \begin{center}
-                \MakeUppercase{\textbf{O{\'s}wiadczenie}}
-        \end{center}
-        \vspace*{16pt}
+    {\small
+    \begin{flushright}
+        Krak\'{o}w, dnia \@date
+    \end{flushright}
 
-        {\bfseries\singlespacing
-                Uprzedzon\ya~o odpowiedzialno{\'s}ci karnej na podstawie art. 115 ust 1 i 2 ustawy z dnia 4 lutego 1994 r. o prawie autorskim i prawach pokrewnych (tj. Dz. U. z 2006 r. Nr 90, poz. 631 z p{\'o}{\'z}n. zm.): ,,Kto przyw{\l{}}aszcza sobie autorstwo albo wprowadza w b{\l{}}{\k{a}}d co do autorstwa ca{\l{}}o{\'s}ci lub cz{\k{e}}{\'s}ci cudzego utworu albo artystycznego wykonania, podlega grzywnie, karze ograniczenia wolno{\'s}ci albo pozbawienia wolno{\'s}ci do lat 3. Tej samej karze podlega, kto rozpowszechnia bez podania nazwiska lub pseudonimu tw{\'o}rcy cudzy utw{\'o}r w wersji oryginalnej albo w postaci opracowania, artystyczne wykonanie albo publicznie zniekszta{\l{}}ca taki utw{\'o}r, artystyczne wykonanie, fonogram, wideogram lub  nadanie'', a tak{\.z}e uprzedzon\ya~o odpowiedzialno{\'s}ci dyscyplinarnej na podstawie art. 211 ust. 1 ustawy z dnia 27 lipca 2005 r. Prawo o szkolnictwie wy{\.z}szym (tj. Dz. U. z 2012 r. poz. 572, z p{\'o}{\'z}n. zm.) ,,Za naruszenie przepis{\'o}w obowi{\k{a}}zuj{\k{a}}cych w uczelni oraz za czyny uchybiaj{\k{a}}ce godno{\'s}ci student ponosi odpowiedzialno{\'s}{\'c} dyscyplinarn{\k{a}} przed komisj{\k{a}} dyscyplinarn{\k{a}} albo przed s{\k{a}}dem kole{\.z}e{\'n}skim samorz{\k{a}}du studenckiego, zwanym dalej ,,s{\k{a}}dem kole{\.z}e{\'n}skim'', o{\'s}wiadczam, {\.z}e niniejsz{\k{a}} prac{\k{e}} dyplomow{\k{a}} wykona{\l{}}\ea m osobi{\'s}cie i samodzielnie i {\.z}e nie korzysta{\l{}}\ea m ze {\'z}r{\'o}de{\l{}} innych ni{\.z} wymienione w pracy''.
-        }
-        \vspace*{28pt}
-        
-        \begin{flushright}
-                \begin{tabular}{c}
-                        \dots\dots\dots\dots\dots\dots\dots\dots\dots \\
-                        \textit{podpis dyplomanta} \\
-                \end{tabular}
-        \end{flushright}
+    {\singlespacing
+     \noindent
+     \begin{flushleft}
+         \@author \\
+         \textit{Imiona i nazwisko studenta} \\
+         \@degreeprogrammePL, \@thesistypePL ie, \@formPL \\
+         \textit{Kierunek, poziom, forma studi\'{o}w} \\
+         \@facultyPL \\
+         \textit{Nazwa wydzia\l{}u} \\
+         \@supervisor \\
+         \textit{Imiona i nazwisko opiekuna pracy dyplomowej} \\
+     \end{flushleft}
+     \vspace*{33pt}
 
-        %--------------------------OŚWIADCZENIE O SAMODZIELNYM WYKONANIU--------------------------
+     \noindent\underline{\textbf{Ja ni\.{z}ej podpisan\ya\ o\'{s}wiadczam, 
+     \.{z}e:}} \\
 
-        \clearpage 
-        \thispagestyle{empty} 
+     \noindent jako tw\'{o}rca/wsp\'{o}\l{}tw\'{o}rca\footnotemark[1] pracy 
+     dyplomowej in\.{z}ynierskiej/licencjackiej/magisterskiej\footnotemark[1] 
+     pt. \\
+     \@titlePL
 
-        \begin{flushright}
-                Krak\'{o}w, \@date
-        \end{flushright}
-        
-        \noindent
-        \begin{tabular}{m{31mm} l}
-                Imi\k{e} i nazwisko: & \@author \\
-                Nr. albumu: & \@albumnum \\
-                Kierunek studi\'{o}w: & \@degreeprogrammePL \\
-                Specjalno{\'s}{\'c}: & \@specialisationPL \\
-        \end{tabular}
-        \vspace*{28pt}
+     \begin{enumerate}[leftmargin=.5cm, itemsep=0cm]
+        \setlength{\parskip}{0cm}
+		\item \textbf{uprzedzon\ya~o odpowiedzialno{\'s}ci karnej} na podstawie
+		art. 115 ust 1~i~2 ustawy z~dnia 4~lutego 1994~r. o~prawie autorskim
+		i~prawach
+		pokrewnych (tj. Dz. U. z~2018~r. poz. 1991, z~p{\'o}{\'z}n. zm.): ,,Kto
+		przyw{\l{}}aszcza sobie autorstwo albo wprowadza w~b{\l{}}{\k{a}}d co
+		do autorstwa ca{\l{}}o{\'s}ci lub cz{\k{e}}{\'s}ci cudzego utworu albo
+		artystycznego wykonania, podlega grzywnie, karze ograniczenia
+		wolno{\'s}ci albo pozbawienia wolno{\'s}ci do lat~3. Tej samej karze
+		podlega, kto rozpowszechnia bez podania nazwiska lub pseudonimu
+		tw{\'o}rcy cudzy utw{\'o}r w~wersji oryginalnej albo w~postaci
+		opracowania, artystyczne wykonanie albo publicznie zniekszta{\l{}}ca
+		taki utw{\'o}r, artystyczne wykonanie, fonogram, wideogram lub
+		nadanie'', \textbf{a tak{\.z}e uprzedzon\ya\ o~odpowiedzialno{\'s}ci
+		dyscyplinarnej} na podstawie art. 307 ust.~1 ustawy z~dnia 20 lipca
+		2018~r. Prawo o~szkolnictwie wy{\.z}szym i~nauce (tj. Dz. U. z~2018~r.
+		poz.
+		1668, z~p{\'o}{\'z}n. zm.) ,,Student podlega odpowiedzialno\'{s}ci
+		dyscyplinarnej za naruszenie przepis\'{o}w obowi\k{a}zuj\k{a}cych
+		w~uczelni oraz za czyn uchybiaj\k{a}cy godno\'{s}ci studenta.''
+		\textbf{niniejsz{\k{a}} prac{\k{e}} dyplomow{\k{a}} wykona{\l{}}\ea m
+		osobi{\'s}cie i~samodzielnie i~nie korzysta{\l{}}\ea m ze
+		{\'z}r{\'o}de{\l{}} innych ni{\.z} wymienione w pracy'';}
 
-        \begin{center}
-                \MakeUppercase{\textbf{O{\'s}wiadczenie}}
-        \end{center}
-        \vspace*{16pt}
+       \item praca dyplomowa jest wynikiem mojej tw\'{o}rczo\'{s}ci i~nie
+       narusza praw autorskich innych os\'{o}b;
 
-        \setstretch{1.5}{
-                {\'S}wiadom\ya~odpowiedzialno{\'s}ci karnej za po{\'s}wiadczanie nieprawdy o{\'s}wiadczam, {\.z}e niniejsz{\k{a}} \@thesistypePL{\k{a}} prac{\k{e}} dyplomow{\k{a}} wykona{\l{}}\ea m osobi{\'s}cie i samodzielnie oraz nie korzysta{\l{}}\ea m ze {\'z}r{\'o}de{\l{}} innych ni{\.z} wymienione w pracy.
+       \item wersja elektroniczna przed\l{}o\.{z}onej w~wersji papierowej pracy
+       dyplomowej jest wersj\k{a} ostateczn\k{a}, kt\'{o}ra b\k{e}dzie
+       przedstawiona komisji przeprowadzaj\k{a}cej egzamin dyplomowy;
 
-                Jednocze{\'s}nie o{\'s}wiadczam, {\.z}e dokumentacja pracy nie narusza praw autorskich w~rozumieniu ustawy z dnia 4 lutego 1994 roku o prawie autorskim i prawach pokrewnych (Dz. U. z 2006 r. Nr 90 poz. 631 z p{\'o}{\'z}niejszymi zmianami) oraz d{\'o}br osobistych chronionych prawem cywilnym. Nie zawiera ona r{\'o}wnie{\.z} danych i informacji, kt{\'o}re uzyska{\l{}}\ea m w spos{\'o}b niedozwolony. Wersja dokumentacji do{\l{}}{\k{a}}czona przeze mnie na no{\'s}niku elektronicznym jest w pe{\l{}}ni zgodna z wydrukiem przedstawionym do recenzji.
+       \item praca dyplomowa nie zawiera \.{z}adnych informacji
+       podlegaj\k{a}cych ochronie na podstawie przepis\'{o}w o~ochronie
+       informacji niejawnych ani nie jest prac\k{a} dyplomow\k{a}, kt\'{o}rej
+       przedmiot jest obj\k{e}ty tajemnic\k{a} prawnie chronion\k{a};
 
-                Za{\'s}wiadczam tak{\.z}e, {\.z}e niniejsza \@thesistypePL a praca dyplomowa nie by{\l{}}a wcze{\'s}niej podstaw{\k{a}} {\.z}adnej innej urz{\k{e}}dowej procedury zwi{\k{a}}zanej z nadawaniem dyplom{\'o}w wy{\.z}szej uczelni lub tytu{\l{}}{\'o}w zawodowych.
-        }
-        \vspace*{28pt}
+       \item $[$\yesno$]$\footnotemark[7]~udzielam nieodp\l{}atnie Akademii
+       G\'{o}rniczo-Hutniczej im. Stanis\l{}awa Staszica w~Krakowie licencji
+       niewy\l{}\k{a}cznej, bez ogranicze\'{n} czasowych, terytorialnych
+       i~ilo\'{s}ciowych na udost\k{e}pnienie mojej pracy dyplomowej w~sieci
+       Internet za po\'{s}rednictwem Repozytorium AGH.
+     \end{enumerate}
+    }
+	\vspace*{22pt}
 
-        \begin{flushright}
-                \begin{tabular}{c}
-                        \dots\dots\dots\dots\dots\dots\dots\dots\dots \\
-                        \textit{podpis dyplomanta} \\
-                \end{tabular}
-        \end{flushright}
+	\begin{flushright}
+		\begin{tabular}{c}
+			\dots\dots\dots\dots\dots\dots\dots\dots\dots \\
+			\textit{czytelny podpis studenta} \\
+		\end{tabular}
+	\end{flushright}
 
-        %--------------------------OŚWIADCZENIE O PRZEKAZANIU PRAW AUTORSKICH--------------------------
+    
+    \clearpage
+    \thispagestyle{empty}
+    {\singlespacing
+     \noindent\underline{\textbf{Jednocze\'{s}nie uczelnia informuje, \.{z}e:}}
+     
+     \begin{enumerate}[leftmargin=.5cm, itemsep=0cm]
+        \setlength{\parskip}{0cm}
+        \item zgodnie z~art. 15a ww. ustawy o~prawie autorskim i~prawach 
+         pokrewnych uczelni przys\l{}uguje pierwsze\'{n}stwo w~opublikowaniu 
+         pracy dyplomowej studenta. Je\.{z}eli uczelnia nie opublikowa\l{}a 
+         pracy dyplomowej w~terminie 6~miesięcy od dnia jej obrony, autor 
+         mo\.{z}e j\k{a} opublikowa\'{c}, chyba \.{z}e praca jest 
+         cz\k{e}\'{s}ci\k{a} utworu zbiorowego. Ponadto uczelnia jako podmiot, 
+         o~kt\'{o}rym mowa w~art.~7 ust.~1 pkt.~1 ustawy z~dnia 20 lipca 
+         2018~r. -- Prawo o~szkolnictwie wy\.{z}szym i~nauce (Dz.~U. z~2018~r. 
+         poz. 1668, z~p\'{o}\'{z}n. zm.), mo\.{z}e korzysta\'{c} bez 
+         wynagrodzenia i~bez konieczno\'{s}ci uzyskania zgody autora z~utworu 
+         stworzonego przez studenta w~wyniku wykonywania obowi\k{a}zk\'{o}w 
+         zwi\k{a}zanych z~odbywaniem studi\'{o}w, udost\k{e}pnia\'{c} utw\'{o}r 
+         ministrowi w\l{}ła\'{s}ciwemu do spraw szkolnictwa wy\.{z}szego 
+         i~nauki oraz korzysta\'{c} z utwor\'{o}w znajduj\k{a}cych si\k{e} 
+         w~prowadzonych przez niego bazach danych, w~celu sprawdzania 
+         z~wykorzystaniem Jednolitego Systemu Antyplagiatowego. Minister 
+         w\l{}a\'{s}ciwy do spraw szkolnictwa wy\.{z}szego i~nauki mo\.{z}e 
+         korzysta\'{c} z~prac dyplomowych znajduj\k{a}cych si\k{e} 
+         w~prowadzonych przez niego bazach danych w~zakresie niezb\k{e}dnym do 
+         zapewnienia prawid\l{}owego utrzymania i~rozwoju tych baz oraz 
+         wsp\'{o}\l{}pracuj\k{a}cych z~nimi system\'{o}w informatycznych;
+        \item w~\'{s}wietle art. 342 ust. 3 pkt. 5 i~art. 347 ust.~1 ustawy 
+        Prawo o~szkolnictwie wy\.{z}szym i~nauce minister w\l{}a\'{s}ciwy do 
+        spraw szkolnictwa wy\.{z}szego i~nauki prowadzi baz\k{e} danych 
+        zwan\k{a} repozytorium pisemnych prac dyplomowych, kt\'{o}ra obejmuje: 
+        tytu\l{} i~tre\'{s}\'{c} pracy dyplomowej; imiona i~nazwisko autora 
+        pracy dyplomowej; numer PESEL autora pracy dyplomowej, a~w~przypadku 
+        jego braku -- numer dokumentu potwierdzaj\k{a}cego 
+        to\.{z}samo\'{s}\'{c} oraz nazw\k{e} pa\'{n}stwa, kt\'{o}re go 
+        wyda\l{}o; imiona i~nazwisko promotora pracy dyplomowej, numer PESEL, 
+        a~w~przypadku jego braku -- numer dokumentu potwierdzaj\k{a}cego 
+        to\.{z}samo\'{s}\'{c} oraz nazw\k{e} pa\'{n}stwa, kt\'{o}re go 
+        wyda\l{}o; imiona i~nazwisko recenzenta pracy dyplomowej, numer PESEL, 
+        a~w~przypadku jego braku – numer dokumentu potwierdzaj\k{a}cego 
+        to\.{z}samo\'{s}\'{c} oraz nazw\k{e} pa\'{n}stwa, kt\'{o}re go 
+        wyda\l{}o; nazw\k{e} uczelni; dat\k{e} zdania egzaminu dyplomowego; 
+        kierunek, poziom i~profil studi\'{o}w. Ponadto, zgodnie z~art. 347 ust. 
+        2-5 ustawy Prawo o~szkolnictwie wy\.{z}szym i~nauce ww. dane 
+        wprowadzaj\k{a} do Zintegrowanego Systemu Informacji o~Szkolnictwie 
+        Wy\.{z}szym i~Nauce POL-on (System POL-on) rektorzy. Dost\k{e}p do 
+        danych przys\l{}uguje promotorowi pracy dyplomowej oraz Polskiej 
+        Komisji Akredytacyjnej, a~tak\.{z}e ministrowi w~zakresie 
+        niezb\k{e}dnym do prawid\l{}owego utrzymania i~rozwoju repozytorium 
+        oraz system\'{o}w informatycznych wsp\'{o}\l{}pracuj\k{a}cych z~tym 
+        repozytorium. Rektor wprowadza tre\'{s}\'{c} pracy dyplomowej do 
+        repozytorium niezw\l{}ocznie po zdaniu przez studenta egzaminu 
+        dyplomowego. W~repozytorium nie zamieszcza si\k{e} prac 
+        zawieraj\k{a}cych informacje podlegaj\k{a}ce ochronie na podstawie 
+        przepis\'{o}w o ochronie informacji niejawnych.
+    \end{enumerate}
+    }
 
-        \clearpage 
-        \thispagestyle{empty}
+    } %\small
 
-        \begin{flushright}
-                Krak\'{o}w, \@date
-        \end{flushright}
+    \footnotetext[1]{~niepotrzebne skre\'{s}li\'{c}}
+    \footnotetext[7]{~nale\.{z}y wpisa\'{c} TAK w~przypadku wyra\.{z}enia zgody
+    na udost\k{e}pnienie pracy dyplomowej, NIE -- w~przypadku braku zgody;
+    nieuzupe\l{}nione pole oznacza brak zgody na udost\k{e}pnienie pracy.}
 
-        \noindent\begin{tabular}{l p{77mm}}
-                Imi\k{e} i nazwisko: & \@author \\
-                Adres korespondencyjny: & \@address \\
-                Temat pracy dyplomowej \@thesistypePL iej: & \@titlePL \\
-                Rok uko{\'n}czenia: & \@graduationyear \\
-                Nr. albumu: & \@albumnum \\
-                Kierunek studi\'{o}w: & \@degreeprogrammePL \\
-                Specjalno{\'s}{\'c}: & \@specialisationPL \\
-        \end{tabular}
-        \vspace*{28pt}
 
-        \begin{center}
-                \MakeUppercase{\textbf{O{\'s}wiadczenie}}
-        \end{center}
-        \vspace*{16pt}
+	%--------------------------STRESZCZENIE--------------------------
 
-        \setstretch{1.5}{
-                Niniejszym o{\'s}wiadczam, {\.z}e zachowuj{\k{a}}c moje prawa autorskie, udzielam Akademii G{\'o}rniczo-Hutniczej im. S. Staszica w Krakowie nieograniczonej w czasie nieodp{\l{}}atnej licencji niewy{\l{}}{\k{a}}cznej do korzystania z przedstawionej dokumentacji \@thesistypePL iej pracy dyplomowej, w zakresie publicznego udost{\k{e}}pniania i rozpowszechniania w wersji drukowanej i elektronicznej\footnotemark.
+    \clearpage
+    \thispagestyle{empty}
 
-                Publikacja ta mo\.ze nast{\k{a}}pi\'c po ewentualnym zg{\l{}}oszeniu do ochrony prawnej wynalazk\'ow, wzor\'ow u\.zytkowych, wzor\'ow przemys{\l{}}owych b{\k{e}}d{\k{a}}cych wynikiem pracy in\.zynierskiej\footnotemark.
-        }
-        \vspace*{10pt}
-        
-        \begin{flushright}
-                \begin{tabular}{l c c}
-            Krak\'ow, & \dots\dots\dots & \dots\dots\dots\dots\dots\dots \\
-                      & {\itshape data}      & {\itshape podpis dyplomanta} \\
-          \end{tabular}
-        \end{flushright}
+    \begin{flushright}
+        Krak\'{o}w, \@date
+    \end{flushright}
 
-        \footnotetext[1]{Na podstawie Ustawy z dnia 27 lipca 2005 r. o prawie o szkolnictwie wy{\.z}szym (Dz.U. z 2005 Nr 164, poz. 1365) Art. 239 oraz Ustawy z dnia 4 lutego 1994 r. o prawie autorskim i prawach pokrewnych (Dz.U. 2000 r. Nr 80, poz. 904, z p{\'o}{\'z}n. zm.) Art. 15a: "Uczelni w rozumieniu przepis{\'o}w o szkolnictwie wy{\.z}szym przys{\l{}}uguje pierwsze{\'n}stwo w opublikowaniu pracy dyplomowej studenta. Je{\.z}eli uczelnia nie opublikowa{\l{}}a pracy dyplomowej w ci{\k{a}}gu 6 miesi{\k{e}}cy od jej obrony, student, kt{\'o}ry j{\k{e}} przygotowa{\l{}}, mo{\.z}e j{\k{a}} opublikowa{\'c}, chyba {\.z}e praca dyplomowa jest cz{\k{e}}{\'s}ci{\k{a}} utworu zbiorowego."}
-        \footnotetext[2]{Ustawa z dnia 30 czerwca 2000 r. -- prawo w{\l{}}asno\'sci przemys{\l{}}owej (Dz.U. z 2003 r. Nr 119, poz. 1117, z p\'o\'zn. zm.), a tak\.ze rozporz{\k{a}}dzenie Prezesa Rady Ministr\'ow z dnia 17 wrze\'snia 2001 r. w sprawie dokonywania i rozpatrywania zg{\l{}}osze\'n wynalazk\'ow i wzor\'ow u\.zytkowych (Dz.U. z 2001 r. Nr 102, poz. 1119 oraz z 2005 r. Nr 109, poz. 910).}
+    \begin{flushleft}
+        Akademia G{\'o}rniczo-Hutnicza im. Stanis{\l{}}awa Staszica \\
+        {\bfseries\@facultyPL}
 
-        %--------------------------PLAN PRACY--------------------------
-        \clearpage 
-        \thispagestyle{empty}
+        {\onehalfspacing Kierunek: \@degreeprogrammePL \\
+            Profil dyplomowania: \@specialisationPL}
+        \vspace*{12pt}
+
+        \@author \\
+        {\bfseries Praca dyplomowa \@thesistypePL a} \\
+        \@titlePL \\
+        Opiekun: \@supervisor \\
+    \end{flushleft}
+    \vspace*{24pt}
+
+    \begin{center}
+        \MakeUppercase{Streszczenie}
+    \end{center}
+    \onehalfspacing
+    \@summaryPL
+
+    %--------------------------SUMMARY--------------------------
+
+    \clearpage
+    \thispagestyle{empty}
+
+    \begin{flushright}
+        Cracow, {\selectlanguage{english}\@date}
+    \end{flushright}
+
+    \begin{flushleft}
+        AGH University of Science and Technology \\
+        {\bfseries\@facultyEN}
+
+        {\onehalfspacing Field of Study: \@degreeprogrammeEN \\
+            Specialisations: \@specialisationEN}
+        \vspace*{12pt}
+
+        \@author \\
+        {\bfseries \xmakefirstuc\@thesistypeEN~Diploma Thesis} \\
+        \@titleEN \\
+        Supervisor: \@supervisor \\
+    \end{flushleft}
+    \vspace*{24pt}
+
+    \begin{center}
+        \MakeUppercase{Summary}
+    \end{center}
+    \onehalfspacing
+    \@summaryEN
+
+
+
+	%--------------------------PLAN PRACY--------------------------
+	\clearpage
+	\thispagestyle{empty}
 
         \singlespacing
 
-        \begin{flushright}
-                Krak\'{o}w, \@date
-        \end{flushright}
+	\begin{flushright}
+		Krak\'{o}w, \@date
+	\end{flushright}
 
         \vspace*{2mm}
-                \begin{center}
+		\begin{center}
 
           {\bfseries\MakeUppercase{Akademia G\'{o}rniczo-Hutnicza}}\\
           \indent{\bfseries\MakeUppercase{\@facultyPL}}
 
           \vspace*{8mm}
-        
-          {\bfseries TEMATYKA PRACY DYPLOMOWEJ \MakeUppercase{\@thesistypePL}IEJ} \\ 
+
+          {\bfseries TEMATYKA PRACY I PRAKTYKI DYPLOMOWEJ \MakeUppercase{\@thesistypePL}IEJ} \\
           dla studenta \@yearofstudy~roku studi\'ow stacjonarnych
           \vspace{5mm}
 
@@ -301,7 +412,7 @@
         \onehalfspacing
         \noindent TEMAT PRACY DYPLOMOWEJ \MakeUppercase{\@thesistypePL iej}: \@titlePL \\
         \vspace{10mm}
-        
+
         \noindent\begin{tabular}{p{35mm} p{75mm} c}
           {\itshape Promotor pracy:}  & \@supervisor & \\
                                       &              & \dots\dots\dots\dots\dots \\
@@ -310,7 +421,7 @@
 
         \vspace*{10mm}
         \singlespacing
-        \noindent PLAN PRACY DYPLOMOWEJ:
+        \noindent PROGRAM PRACY I PRAKTYKI DYPLOMOWEJ:
         \@thesisplan
         \vspace*{5mm}
         \begin{flushright}
@@ -328,81 +439,22 @@
             {\itshape podpis promotora} \\
           \end{tabular}
         \end{flushright}
-        
-        
-            
-        %--------------------------STRESZCZENIE--------------------------
-        
-        \clearpage 
-        \thispagestyle{empty}
 
-        \begin{flushright}
-                Krak\'{o}w, \@date
-        \end{flushright}
 
-        \begin{flushleft}
-                Akademia G{\'o}rniczo-Hutnicza im. Stanis{\l{}}awa Staszica \\
-                {\bfseries\@facultyPL}
-        
-                {\onehalfspacing Kierunek: \@degreeprogrammePL \\
-                Profil dyplomowania: \@specialisationPL}
-                \vspace*{12pt}
+	%--------------------------PODZIĘKOWANIA--------------------------
 
-                \@author \\
-                {\bfseries Praca dyplomowa \@thesistypePL a} \\
-                \@titlePL \\
-                Opiekun: \@supervisor \\
-        \end{flushleft}
-        \vspace*{24pt}
-        
-        \begin{center}
-                \MakeUppercase{Streszczenie} 
-        \end{center}
-        {\onehalfspacing\@summaryPL}
+	\clearpage \titlepage
 
-        %--------------------------SUMMARY--------------------------
+	\vspace*{15cm} \vfill
+	\begin{flushright}
+	\begin{minipage}[!h]{10cm}
+	{\Large\itshape \@acknowledgements}
+	\end{minipage}
+	\end{flushright}
 
-        \clearpage 
-        \thispagestyle{empty}
+	\clearpage
 
-        \begin{flushright}
-                Cracow, {\selectlanguage{english}\@date}
-        \end{flushright}
-
-        \begin{flushleft}
-                AGH University of Science and Technology \\
-                {\bfseries\@facultyEN}
-        
-                {\onehalfspacing Field of Study: \@degreeprogrammeEN \\
-                Specialisations: \@specialisationEN}
-                \vspace*{12pt}
-
-                \@author \\
-                {\bfseries \xmakefirstuc\@thesistypeEN~Diploma Thesis} \\
-                \@titleEN \\
-                Supervisor: \@supervisor \\
-        \end{flushleft}
-        \vspace*{24pt}
-        
-        \begin{center}
-                \MakeUppercase{Summary} 
-        \end{center}
-        {\onehalfspacing\@summaryEN}
-
-        %--------------------------PODZIĘKOWANIA--------------------------
-
-        \clearpage \titlepage \onehalfspacing
-
-        \vspace*{15cm} \vfill
-        \begin{flushright} 
-        \begin{minipage}[!h]{10cm}
-        {\Large\itshape \@acknowledgements}
-        \end{minipage}
-        \end{flushright}
-
-        \clearpage
-
-        \setcounter{page}{9}
+	\setcounter{page}{9}
 
 }
 
@@ -422,7 +474,7 @@
 \thesisheaders
 
 \frenchspacing
-\sloppy 
+\sloppy
 \flushbottom
 \onehalfspacing
 
@@ -468,10 +520,10 @@
 %---------------------------------------------------------------------------
 
 \sisetup{
-        output-decimal-marker = {,},
-        %       round-mode=places,
-        %       round-precision=4,
-        group-separator={~},
+	output-decimal-marker = {,},
+	%	round-mode=places,
+	%	round-precision=4,
+	group-separator={~},
 }
 
 %---------------------------------------------------------------------------
@@ -488,12 +540,12 @@
 
 \captionsetup[subfigure]{labelfont=md}
 \captionsetup{%
-        % Użyj okrągłych nawiasów wokół odwołań do "podilustracji".
-        subrefformat=parens,
-        % Margines z obu stron podpisu.
-        margin=2cm,
-        % W przypadku podpisów mieszczących się w jednej linii nie stosuj justowania, tylko wyśrodkuj cały podpis.
-        singlelinecheck=on,
+	% Użyj okrągłych nawiasów wokół odwołań do "podilustracji".
+	subrefformat=parens,
+	% Margines z obu stron podpisu.
+	margin=2cm,
+	% W przypadku podpisów mieszczących się w jednej linii nie stosuj justowania, tylko wyśrodkuj cały podpis.
+	singlelinecheck=on,
 }
 
 
@@ -521,7 +573,7 @@
 \begin{description}[leftmargin=\eqwheremargin, itemsep=0cm, labelsep=0cm]
 }
 {\end{description}}
-%%% Local Variables: 
+%%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "praca"
-%%% End: 
+%%% End:
