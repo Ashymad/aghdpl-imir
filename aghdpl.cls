@@ -108,8 +108,7 @@
 	\newpage
 	\titlepage
 
-	\begin{center}
-        \singlespacing
+	\begin{center}{\singlespacing
 
 		\includegraphics[scale=0.4]{agh}
 
@@ -147,7 +146,7 @@
             \makecell{\vspace{\fill}\\\dots\dots\dots\dots} \\
                                     & & \fontsize{11}{12}{\textit{podpis}}\\
         \end{tabular}}
-      \end{center}
+    }\end{center}
 	\noindent
 
 	\vspace*{28pt}
@@ -161,80 +160,85 @@
 	\clearpage
 	\thispagestyle{empty}
 
-	\begin{center}
-		\MakeUppercase{\textbf{O{\'s}wiadczenia studenta}}
-	\end{center}
-
     {\small
-    \begin{flushright}
+      \begin{center}
+        \MakeUppercase{\textbf{O{\'s}wiadczenia studenta}}
+      \end{center}
+
+      \begin{flushright}
         Krak\'{o}w, dnia \@date
-    \end{flushright}
+      \end{flushright}
 
-    {\singlespacing
-     \noindent
-     \begin{flushleft}
-         \@author \\
-         \textit{Imiona i nazwisko studenta} \\
-         \@degreeprogrammePL, \@thesistypePL ie, \@formPL \\
-         \textit{Kierunek, poziom, forma studi\'{o}w} \\
-         \@facultyPL \\
-         \textit{Nazwa wydzia\l{}u} \\
-         \@supervisor \\
-         \textit{Imiona i nazwisko opiekuna pracy dyplomowej} \\
-     \end{flushleft}
-     \vspace*{33pt}
+      {\singlespacing
+        \noindent
+        \begin{flushleft}
+          \@author \\
+          \textit{Imiona i nazwisko studenta} \\
+          \vspace*{0.4cm}
+          \@degreeprogrammePL, \@thesistypePL ie, \@formPL \\
+          \textit{Kierunek, poziom, forma studi\'{o}w} \\
+          \vspace*{0.4cm}
+          \@facultyPL \\
+          \textit{Nazwa wydzia\l{}u} \\
+          \vspace*{0.4cm}
+          \@supervisor \\
+          \textit{Imiona i nazwisko opiekuna pracy dyplomowej} \\
+        \end{flushleft}
+        \vspace*{33pt}
 
-     \noindent\underline{\textbf{Ja ni\.{z}ej podpisan\ya\ o\'{s}wiadczam, 
-     \.{z}e:}} \\
+        \noindent\underline{\textbf{Ja ni\.{z}ej podpisan\ya\ o\'{s}wiadczam, 
+        \.{z}e:}} \\
 
-     \noindent jako tw\'{o}rca/wsp\'{o}\l{}tw\'{o}rca\footnotemark[1] pracy 
-     dyplomowej in\.{z}ynierskiej/licencjackiej/magisterskiej\footnotemark[1] 
-     pt. \\
-     \@titlePL
+        \noindent jako tw\'{o}rca/wsp\'{o}\l{}tw\'{o}rca\footnotemark[1] pracy 
+        dyplomowej in\.{z}ynierskiej/licencjackiej/magisterskiej\footnotemark[1] 
+        pt. \\
+        \@titlePL
 
-     \begin{enumerate}[leftmargin=.5cm, itemsep=0cm]
-        \setlength{\parskip}{0cm}
-		\item \textbf{uprzedzon\ya~o odpowiedzialno{\'s}ci karnej} na podstawie
-		art. 115 ust 1~i~2 ustawy z~dnia 4~lutego 1994~r. o~prawie autorskim
-		i~prawach
-		pokrewnych (tj. Dz. U. z~2018~r. poz. 1991, z~p{\'o}{\'z}n. zm.): ,,Kto
-		przyw{\l{}}aszcza sobie autorstwo albo wprowadza w~b{\l{}}{\k{a}}d co
-		do autorstwa ca{\l{}}o{\'s}ci lub cz{\k{e}}{\'s}ci cudzego utworu albo
-		artystycznego wykonania, podlega grzywnie, karze ograniczenia
-		wolno{\'s}ci albo pozbawienia wolno{\'s}ci do lat~3. Tej samej karze
-		podlega, kto rozpowszechnia bez podania nazwiska lub pseudonimu
-		tw{\'o}rcy cudzy utw{\'o}r w~wersji oryginalnej albo w~postaci
-		opracowania, artystyczne wykonanie albo publicznie zniekszta{\l{}}ca
-		taki utw{\'o}r, artystyczne wykonanie, fonogram, wideogram lub
-		nadanie'', \textbf{a tak{\.z}e uprzedzon\ya\ o~odpowiedzialno{\'s}ci
-		dyscyplinarnej} na podstawie art. 307 ust.~1 ustawy z~dnia 20 lipca
-		2018~r. Prawo o~szkolnictwie wy{\.z}szym i~nauce (tj. Dz. U. z~2018~r.
-		poz.
-		1668, z~p{\'o}{\'z}n. zm.) ,,Student podlega odpowiedzialno\'{s}ci
-		dyscyplinarnej za naruszenie przepis\'{o}w obowi\k{a}zuj\k{a}cych
-		w~uczelni oraz za czyn uchybiaj\k{a}cy godno\'{s}ci studenta.''
-		\textbf{niniejsz{\k{a}} prac{\k{e}} dyplomow{\k{a}} wykona{\l{}}\ea m
-		osobi{\'s}cie i~samodzielnie i~nie korzysta{\l{}}\ea m ze
-		{\'z}r{\'o}de{\l{}} innych ni{\.z} wymienione w pracy'';}
+        \vspace*{0.4cm}
 
-       \item praca dyplomowa jest wynikiem mojej tw\'{o}rczo\'{s}ci i~nie
-       narusza praw autorskich innych os\'{o}b;
+        \begin{enumerate}[leftmargin=.5cm, itemsep=0cm]
+          \setlength{\parskip}{0cm}
+        \item \textbf{uprzedzon\ya~o odpowiedzialno{\'s}ci karnej} na podstawie
+          art. 115 ust 1~i~2 ustawy z~dnia 4~lutego 1994~r. o~prawie autorskim
+          i~prawach
+          pokrewnych (tj. Dz. U. z~2018~r. poz. 1991, z~p{\'o}{\'z}n. zm.): ,,Kto
+          przyw{\l{}}aszcza sobie autorstwo albo wprowadza w~b{\l{}}{\k{a}}d co
+          do autorstwa ca{\l{}}o{\'s}ci lub cz{\k{e}}{\'s}ci cudzego utworu albo
+          artystycznego wykonania, podlega grzywnie, karze ograniczenia
+          wolno{\'s}ci albo pozbawienia wolno{\'s}ci do lat~3. Tej samej karze
+          podlega, kto rozpowszechnia bez podania nazwiska lub pseudonimu
+          tw{\'o}rcy cudzy utw{\'o}r w~wersji oryginalnej albo w~postaci
+          opracowania, artystyczne wykonanie albo publicznie zniekszta{\l{}}ca
+          taki utw{\'o}r, artystyczne wykonanie, fonogram, wideogram lub
+          nadanie'', \textbf{a tak{\.z}e uprzedzon\ya\ o~odpowiedzialno{\'s}ci
+          dyscyplinarnej} na podstawie art. 307 ust.~1 ustawy z~dnia 20 lipca
+          2018~r. Prawo o~szkolnictwie wy{\.z}szym i~nauce (tj. Dz. U. z~2018~r.
+          poz.
+          1668, z~p{\'o}{\'z}n. zm.) ,,Student podlega odpowiedzialno\'{s}ci
+          dyscyplinarnej za naruszenie przepis\'{o}w obowi\k{a}zuj\k{a}cych
+          w~uczelni oraz za czyn uchybiaj\k{a}cy godno\'{s}ci studenta.''
+          \textbf{niniejsz{\k{a}} prac{\k{e}} dyplomow{\k{a}} wykona{\l{}}\ea m
+            osobi{\'s}cie i~samodzielnie i~nie korzysta{\l{}}\ea m ze
+          {\'z}r{\'o}de{\l{}} innych ni{\.z} wymienione w pracy'';}
 
-       \item wersja elektroniczna przed\l{}o\.{z}onej w~wersji papierowej pracy
-       dyplomowej jest wersj\k{a} ostateczn\k{a}, kt\'{o}ra b\k{e}dzie
-       przedstawiona komisji przeprowadzaj\k{a}cej egzamin dyplomowy;
+        \item praca dyplomowa jest wynikiem mojej tw\'{o}rczo\'{s}ci i~nie
+          narusza praw autorskich innych os\'{o}b;
 
-       \item praca dyplomowa nie zawiera \.{z}adnych informacji
-       podlegaj\k{a}cych ochronie na podstawie przepis\'{o}w o~ochronie
-       informacji niejawnych ani nie jest prac\k{a} dyplomow\k{a}, kt\'{o}rej
-       przedmiot jest obj\k{e}ty tajemnic\k{a} prawnie chronion\k{a};
+        \item wersja elektroniczna przed\l{}o\.{z}onej w~wersji papierowej pracy
+          dyplomowej jest wersj\k{a} ostateczn\k{a}, kt\'{o}ra b\k{e}dzie
+          przedstawiona komisji przeprowadzaj\k{a}cej egzamin dyplomowy;
 
-       \item $[$\yesno$]$\footnotemark[7]~udzielam nieodp\l{}atnie Akademii
-       G\'{o}rniczo-Hutniczej im. Stanis\l{}awa Staszica w~Krakowie licencji
-       niewy\l{}\k{a}cznej, bez ogranicze\'{n} czasowych, terytorialnych
-       i~ilo\'{s}ciowych na udost\k{e}pnienie mojej pracy dyplomowej w~sieci
-       Internet za po\'{s}rednictwem Repozytorium AGH.
-     \end{enumerate}
+        \item praca dyplomowa nie zawiera \.{z}adnych informacji
+          podlegaj\k{a}cych ochronie na podstawie przepis\'{o}w o~ochronie
+          informacji niejawnych ani nie jest prac\k{a} dyplomow\k{a}, kt\'{o}rej
+          przedmiot jest obj\k{e}ty tajemnic\k{a} prawnie chronion\k{a};
+
+        \item $[$\yesno$]$\footnotemark[7]~udzielam nieodp\l{}atnie Akademii
+          G\'{o}rniczo-Hutniczej im. Stanis\l{}awa Staszica w~Krakowie licencji
+          niewy\l{}\k{a}cznej, bez ogranicze\'{n} czasowych, terytorialnych
+          i~ilo\'{s}ciowych na udost\k{e}pnienie mojej pracy dyplomowej w~sieci
+          Internet za po\'{s}rednictwem Repozytorium AGH.
+      \end{enumerate}
     }
 	\vspace*{22pt}
 
