@@ -191,8 +191,7 @@
         \.{z}e:}} \\
 
         \noindent jako tw\'{o}rca/wsp\'{o}\l{}tw\'{o}rca\footnotemark[1] pracy 
-        dyplomowej in\.{z}ynierskiej/licencjackiej/magisterskiej\footnotemark[1] 
-        pt. \\
+        dyplomowej \@thesistypePL iej pt. \\
         \@titlePL
 
         \vspace*{0.4cm}
