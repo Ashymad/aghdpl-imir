@@ -369,9 +369,9 @@
       {\bfseries\@facultyEN}
       \vspace*{0.2cm}
 
-      Field of Study: \@degreeprogrammePL
+      Field of Study: \@degreeprogrammeEN
       \\\vspace*{0.2cm}
-      Specialization: \@specialisationPL
+      Specialization: \@specialisationEN
       \\\vspace*{0.2cm}
       \@author \\
       \textit{(First name and family name of the student)}
